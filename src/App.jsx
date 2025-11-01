@@ -58,6 +58,9 @@ function App() {
             <div className="mobile-menu-dropdown">
               <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
               <a href="#faq" onClick={() => setMobileMenuOpen(false)}>FAQ</a>
+              <a className="dropdown-cta" href="#waitlist" onClick={() => setMobileMenuOpen(false)}>
+                Join Waitlist
+              </a>
             </div>
           </>
         )}
@@ -90,7 +93,7 @@ function App() {
               Shop, share, and celebrate culture—launching soon.
             </p>
             
-            <form className="waitlist-form" onSubmit={handleSubmit}>
+            <form id="waitlist" className="waitlist-form" onSubmit={handleSubmit}>
               <label className="visually-hidden" htmlFor="email">Email address</label>
               <input 
                 id="email" 

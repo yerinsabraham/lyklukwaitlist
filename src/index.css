@@ -94,7 +94,8 @@ section { padding: 64px 0; }
   display: flex;
   gap: 50px;
   align-items: center;
-  animation: scroll-logos 20s linear infinite;
+  /* Increased speed ~20% (from 20s to 16s) */
+  animation: scroll-logos 16s linear infinite;
 }
 
 .partners-track:hover {
@@ -302,10 +303,19 @@ section { padding: 64px 0; }
     max-width: 100%; 
     flex-direction: column;
     gap: 0.75rem;
+    /* Let input/button backgrounds stand out on hero */
+    background: transparent;
+    box-shadow: none;
+    padding: 0;
   }
   .waitlist-form .input-email,
   .waitlist-form .btn-submit {
     width: 100%;
+  }
+  .waitlist-form input[type="email"] {
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: var(--radius-sm);
+    padding: 0.9rem 1rem;
   }
   
   .hero {
