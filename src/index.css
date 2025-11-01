@@ -67,7 +67,7 @@ section { padding: 64px 0; }
   display: grid;
   align-items: center;
   color: white;
-  background: url('/assets/images/background1.png') center/cover no-repeat fixed;
+  background: url('/assets/images/2background1.png') center/cover no-repeat fixed;
 }
 .hero::after {
   content: "";
