@@ -6,7 +6,7 @@ export default function BuiltForYou() {
     <section className={styles.section}>
       <div className={styles.container}>
         {/* Left: collage */}
-        <div className={styles.left}>
+  <div className={`${styles.left} ${styles.orbit}`}>
           {/* Layered circles */}
           <div className={`${styles.circleBase} ${styles.circle1}`} />
           <div className={`${styles.circleBase} ${styles.circle2}`} />

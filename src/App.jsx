@@ -265,9 +265,6 @@ function App() {
         </div>
       </section>
 
-  {/* Built For You Hero Section */}
-  <BuiltForYou />
-
       {/* Get Featured Section */}
       <section className="get-featured-section">
         <div className="container get-featured-container">
@@ -287,13 +284,8 @@ function App() {
         </div>
       </section>
 
-      {/* Placeholder sections to enable scrolling structure */}
-      <section id="features">
-        <div className="container">
-          <h2 style={{color:'var(--color-primary)'}}>Built for speed and trust</h2>
-          <p>We'll add detailed sections based on your Figma next.</p>
-        </div>
-      </section>
+      {/* Built For You Hero Section - Move to last section before footer */}
+      <BuiltForYou />
 
       <footer>
         <div className="container">© {new Date().getFullYear()} Lykluk Digital</div>

@@ -70,7 +70,7 @@
 .cta {
   display: inline-flex; align-items: center; gap: 10px;
   background: var(--color-primary); color: #fff;
-  border: none; border-radius: 16px; padding: 0.5rem 1rem; font-weight: 700;
+  border: none; border-radius: 16px; padding: 0.9rem 1.25rem; font-weight: 700;
   cursor: pointer; transition: transform .15s ease, filter .15s ease;
 }
 .cta:hover { transform: translateY(-1px); filter: brightness(1.05); }
@@ -86,4 +86,23 @@
   .circle2 { width: 280px; height: 280px; }
   .circle3 { width: 220px; height: 220px; }
   .mainImage { width: 220px; height: 220px; }
+}
+
+/* Optional orbit animation for decorative images */
+.orbit .decor { top: 50%; left: 50%; }
+
+@keyframes orbit360 {
+  from { transform: rotate(0deg) translateX(var(--orbit-r, 160px)) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(var(--orbit-r, 160px)) rotate(-360deg); }
+}
+
+/* Assign radii and speeds per item on large screens */
+@media (min-width: 969px) {
+  .orbit .d1 { --orbit-r: 170px; animation: orbit360 48s linear infinite; width: 88px; height: 88px; }
+  .orbit .d2 { --orbit-r: 140px; animation: orbit360 42s linear infinite; width: 76px; height: 76px; }
+  .orbit .d3 { --orbit-r: 180px; animation: orbit360 55s linear infinite; width: 92px; height: 92px; }
+  .orbit .d4 { --orbit-r: 160px; animation: orbit360 50s linear infinite; width: 84px; height: 84px; }
+  .orbit .d5 { --orbit-r: 150px; animation: orbit360 47s linear infinite; width: 78px; height: 78px; }
+  .orbit .d6 { --orbit-r: 175px; animation: orbit360 58s linear infinite; width: 86px; height: 86px; }
+  .orbit .d7 { --orbit-r: 165px; animation: orbit360 52s linear infinite; width: 72px; height: 72px; }
 }
