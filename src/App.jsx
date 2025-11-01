@@ -221,6 +221,28 @@ function App() {
         </div>
       </section>
 
+      {/* Reach Shoppers Section */}
+      <section className="reach-shoppers-section">
+        <div className="container reach-shoppers-container">
+          <div className="reach-shoppers-image">
+            <img src="/assets/images/4bgimage.png" alt="Reach thousands of shoppers" />
+          </div>
+          <div className="reach-shoppers-content">
+            <h2 className="reach-shoppers-heading">Reach Thousands of Shoppers</h2>
+            <p className="reach-shoppers-desc">
+              Promote your products on Lykluk and connect with customers actively looking to buy. 
+              No account needed, just submit your ad & start selling.
+            </p>
+            <a href="#advertise" className="btn-advertise">
+              Advertise Your Product
+              <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
+                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Placeholder sections to enable scrolling structure */}
       <section id="features">
         <div className="container">
