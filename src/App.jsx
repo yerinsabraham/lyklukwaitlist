@@ -248,7 +248,7 @@ function App() {
         <div className="container podcast-container">
           <div className="podcast-content">
             <div className="podcast-badge">
-              <span aria-hidden="true">🔊</span>
+              <span aria-hidden="true">🎙️</span>
               <span>Your Voice Matters</span>
             </div>
             <h2 className="podcast-heading">Start a podcast. Right here.</h2>
@@ -260,6 +260,25 @@ function App() {
             <div className="podcast-image-frame">
               <img src="/assets/images/5bgimage.png" alt="Start your podcast" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Get Featured Section */}
+      <section className="get-featured-section">
+        <div className="container get-featured-container">
+          <div className="get-featured-image">
+            <img src="/assets/images/6bgimage.png" alt="Get featured on Lykluk" />
+          </div>
+          <div className="get-featured-content">
+            <div className="get-featured-badge">
+              <span aria-hidden="true">🔊</span>
+              <span>Run Ads</span>
+            </div>
+            <h2 className="get-featured-heading">Get featured. Reach thousands</h2>
+            <p className="get-featured-desc">
+              Run ads on your products. Get featured on the home feed. Reach customers across Africa instantly.
+            </p>
           </div>
         </div>
       </section>
