@@ -99,11 +99,37 @@ function App() {
         </div>
       </section>
 
+      {/* Partners Section */}
+      <section className="partners-section">
+        <h2>Our Partners</h2>
+        <div className="partners-marquee">
+          <div className="partners-track">
+            <img src="/assets/images/partners/access.png" alt="Access Bank" />
+            <img src="/assets/images/partners/byteplus.png" alt="BytePlus" />
+            <img src="/assets/images/partners/googlecloud.png" alt="Google Cloud" />
+            <img src="/assets/images/partners/gtbank.png" alt="GTBank" />
+            <img src="/assets/images/partners/metpay.png" alt="MetPay" />
+            <img src="/assets/images/partners/paystack.png" alt="Paystack" />
+            <img src="/assets/images/partners/startbutton.png" alt="Start Button" />
+            <img src="/assets/images/partners/sterling.png" alt="Sterling Bank" />
+            {/* Duplicate for seamless loop */}
+            <img src="/assets/images/partners/access.png" alt="Access Bank" />
+            <img src="/assets/images/partners/byteplus.png" alt="BytePlus" />
+            <img src="/assets/images/partners/googlecloud.png" alt="Google Cloud" />
+            <img src="/assets/images/partners/gtbank.png" alt="GTBank" />
+            <img src="/assets/images/partners/metpay.png" alt="MetPay" />
+            <img src="/assets/images/partners/paystack.png" alt="Paystack" />
+            <img src="/assets/images/partners/startbutton.png" alt="Start Button" />
+            <img src="/assets/images/partners/sterling.png" alt="Sterling Bank" />
+          </div>
+        </div>
+      </section>
+
       {/* Placeholder sections to enable scrolling structure */}
       <section id="features">
         <div className="container">
           <h2 style={{color:'var(--color-primary)'}}>Built for speed and trust</h2>
-          <p>We’ll add detailed sections based on your Figma next.</p>
+          <p>We'll add detailed sections based on your Figma next.</p>
         </div>
       </section>
 
