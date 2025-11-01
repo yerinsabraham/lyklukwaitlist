@@ -1,0 +1,89 @@
+:root {
+  --pry-200: #EEE1F6;
+  --pry-250: #E5D1F1;
+  --pry-300: #D7B9EA;
+}
+
+.section {
+  background: #F7EBFF;
+  padding: 70px 68px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 167px;
+}
+
+.left {
+  position: relative;
+  width: 426px;
+  height: 632px;
+}
+
+/* Layered background circles */
+.circleBase {
+  position: absolute;
+  border-radius: 50%;
+}
+.circle1 { width: 426px; height: 426px; background: var(--pry-200); top: 50%; left: 50%; transform: translate(-50%, -60%); }
+.circle2 { width: 340px; height: 340px; background: var(--pry-250); top: 50%; left: 50%; transform: translate(-50%, -62%); }
+.circle3 { width: 260px; height: 260px; background: var(--pry-300); top: 50%; left: 50%; transform: translate(-50%, -64%); }
+
+.mainImage {
+  position: absolute;
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 260px; height: 260px; border-radius: 50%; object-fit: cover;
+  border: 5px solid var(--pry-250);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+/* Decorative circular images */
+.decor {
+  position: absolute; border-radius: 50%; object-fit: cover; border: 5px solid var(--pry-250);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+/* Approximate positions around the main circle */
+.d1 { width: 88px; height: 88px; top: 18%; left: 6%; }
+.d2 { width: 76px; height: 76px; top: 8%; left: 38%; }
+.d3 { width: 92px; height: 92px; top: 20%; right: 4%; }
+.d4 { width: 84px; height: 84px; bottom: 24%; left: 2%; }
+.d5 { width: 78px; height: 78px; bottom: 6%; left: 34%; }
+.d6 { width: 86px; height: 86px; bottom: 10%; right: 8%; }
+.d7 { width: 72px; height: 72px; top: 56%; right: 0%; }
+
+.right { max-width: 520px; display: flex; flex-direction: column; gap: 16px; }
+
+.badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(229, 209, 241, 0.25);
+  color: var(--color-primary);
+  padding: 8px 16px; border-radius: 100px; font-weight: 600;
+}
+
+.title { font-size: 50px; color: #251727; font-weight: 700; line-height: 55px; margin: 0; }
+.subtitle { font-size: 18px; color: #4E494F; line-height: 30px; margin: 0; }
+
+.cta {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--color-primary); color: #fff;
+  border: none; border-radius: 16px; padding: 0.5rem 1rem; font-weight: 700;
+  cursor: pointer; transition: transform .15s ease, filter .15s ease;
+}
+.cta:hover { transform: translateY(-1px); filter: brightness(1.05); }
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .container { gap: 80px; }
+}
+@media (max-width: 968px) {
+  .container { flex-direction: column; gap: 32px; }
+  .left { width: 340px; height: 520px; }
+  .circle1 { width: 340px; height: 340px; }
+  .circle2 { width: 280px; height: 280px; }
+  .circle3 { width: 220px; height: 220px; }
+  .mainImage { width: 220px; height: 220px; }
+}

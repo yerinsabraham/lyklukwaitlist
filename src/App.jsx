@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import BuiltForYou from './components/BuiltForYou'
 import './App.css'
 
 function App() {
@@ -263,6 +264,9 @@ function App() {
           </div>
         </div>
       </section>
+
+  {/* Built For You Hero Section */}
+  <BuiltForYou />
 
       {/* Get Featured Section */}
       <section className="get-featured-section">
