@@ -8,14 +8,14 @@
 /* Top navigation - floating transparent bar */
 .nav {
   position: fixed;
-  top: 24px;
+  top: 20px;
   left: 50%;
   transform: translateX(-50%);
   width: min(1100px, 90%);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.2rem 2rem;
+  padding: 0.75rem 1.75rem;
   backdrop-filter: blur(8px);
   background: rgba(255, 255, 255, 0.8);
   border-radius: 100px;
@@ -29,11 +29,11 @@
   align-items: center;
   gap: 10px;
   font-weight: 800;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: var(--color-charcoal);
   letter-spacing: 0.5px;
 }
-.nav .brand img { height: 36px; width: auto; display: block; }
+.nav .brand img { height: 30px; width: auto; display: block; }
 
 .nav .nav-links {
   display: flex;
@@ -45,7 +45,7 @@
 .nav .nav-links a {
   color: var(--color-charcoal);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   transition: color 0.2s;
 }
 .nav .nav-links a:hover { color: var(--color-primary); }
@@ -58,12 +58,12 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 0.65rem 1.5rem;
+  padding: 0.55rem 1.3rem;
   background: var(--color-primary);
   color: white;
   border-radius: 50px;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   transition: all 0.2s ease;
   box-shadow: 0 2px 8px rgba(106, 13, 173, 0.3);
 }

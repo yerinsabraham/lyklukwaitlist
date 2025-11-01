@@ -24,7 +24,7 @@ html, body, #root {
 body {
   margin: 0;
   min-width: 320px;
-  background: var(--color-whitesmoke);
+  background: var(--color-primary);
   color: var(--color-charcoal);
 }
 
