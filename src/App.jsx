@@ -5,6 +5,7 @@ function App() {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState('idle') // idle | loading | success | error
   const [message, setMessage] = useState('')
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   async function handleSubmit(e){
     e.preventDefault()
@@ -38,6 +39,28 @@ function App() {
           <a href="#about">About</a>
           <a href="#faq">FAQ</a>
         </div>
+
+        <button 
+          className="mobile-menu-btn" 
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Menu"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+            <circle cx="12" cy="5" r="1.5" />
+            <circle cx="12" cy="12" r="1.5" />
+            <circle cx="12" cy="19" r="1.5" />
+          </svg>
+        </button>
+
+        {mobileMenuOpen && (
+          <>
+            <div className="mobile-menu-overlay" onClick={() => setMobileMenuOpen(false)} />
+            <div className="mobile-menu-dropdown">
+              <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
+              <a href="#faq" onClick={() => setMobileMenuOpen(false)}>FAQ</a>
+            </div>
+          </>
+        )}
 
         <a className="nav-cta" href="#waitlist">
           Join Waitlist

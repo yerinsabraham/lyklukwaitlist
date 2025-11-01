@@ -297,5 +297,23 @@ section { padding: 64px 0; }
 .waitlist-message.loading { color: #E0E0E0; }
 
 @media (max-width: 968px) {
-  .waitlist-form { max-width: 100%; }
+  .waitlist-form { 
+    max-width: 100%; 
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .waitlist-form .input-email,
+  .waitlist-form .btn-submit {
+    width: 100%;
+  }
+  
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem;
+    min-height: auto;
+  }
+  
+  .hero-image {
+    display: none;
+  }
 }
