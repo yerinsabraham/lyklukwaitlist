@@ -243,6 +243,27 @@ function App() {
         </div>
       </section>
 
+      {/* Podcast Section */}
+      <section className="podcast-section">
+        <div className="container podcast-container">
+          <div className="podcast-content">
+            <div className="podcast-badge">
+              <span aria-hidden="true">🔊</span>
+              <span>Your Voice Matters</span>
+            </div>
+            <h2 className="podcast-heading">Start a podcast. Right here.</h2>
+            <p className="podcast-desc">
+              No separate hosting. No extra platform. Just record and publish where your community already hangs out…
+            </p>
+          </div>
+          <div className="podcast-image">
+            <div className="podcast-image-frame">
+              <img src="/assets/images/5bgimage.png" alt="Start your podcast" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Placeholder sections to enable scrolling structure */}
       <section id="features">
         <div className="container">
