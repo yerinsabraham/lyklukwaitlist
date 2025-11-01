@@ -1,0 +1,31 @@
+/* Layout shell */
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+/* Top navigation */
+.nav {
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  backdrop-filter: blur(8px);
+  background: rgba(255,255,255,0.6);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  z-index: 10;
+}
+.nav .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  color: var(--color-charcoal);
+}
+.nav .brand img { height: 36px; width: auto; display: block; }
+.spacer { height: 72px; }
+
+/* Footer placeholder */
+footer { padding: 32px 0; color: #6b6b6b; text-align: center; }

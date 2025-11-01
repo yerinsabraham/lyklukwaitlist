@@ -1,0 +1,102 @@
+:root {
+  /* Brand color tokens */
+  --color-primary: #6A0DAD; /* Grape */
+  --color-secondary: #FFD700; /* Gold */
+  --color-orange: #FF5709; /* Pantone Orange */
+  --color-whitesmoke: #F5F5F5; /* White Smoke */
+  --color-charcoal: #333333; /* Charcoal Grey */
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --shadow-sm: 0 2px 6px rgba(0,0,0,0.08);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.12);
+
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--color-whitesmoke);
+  color: var(--color-charcoal);
+}
+
+* { box-sizing: border-box; }
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn.primary { background: var(--color-primary); color: white; }
+.btn.primary:hover { filter: brightness(1.05); box-shadow: var(--shadow-sm); }
+.btn.ghost { background: transparent; border-color: var(--color-primary); color: var(--color-primary); }
+.btn.ghost:hover { background: rgba(106, 13, 173, 0.08); }
+
+/* Utility */
+.visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+
+/* Section baseline for scrolling layout */
+section { padding: 64px 0; }
+
+/* Hero baseline */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  align-items: center;
+  color: white;
+  background: url('/assets/images/background1.png') center/cover no-repeat;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.45) 0%, rgba(0,0,0,0.55) 60%, rgba(0,0,0,0.35) 100%);
+}
+.hero > .container { position: relative; z-index: 1; }
+.hero h1 { font-size: clamp(2rem, 6vw, 4rem); line-height: 1.1; margin: 0 0 1rem; }
+.hero p { font-size: clamp(1rem, 2.2vw, 1.25rem); opacity: 0.95; margin: 0 0 1.5rem; max-width: 60ch; }
+
+/* Simple waitlist form */
+.waitlist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.1);
+  padding: 0.5rem;
+  border-radius: var(--radius-md);
+  backdrop-filter: blur(6px);
+}
+.waitlist input[type="email"] {
+  flex: 1 1 260px;
+  min-width: 220px;
+  padding: 0.9rem 0.9rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(0,0,0,0.25);
+  color: white;
+}
+.waitlist input::placeholder { color: rgba(255,255,255,0.8); }
+.waitlist .btn { padding: 0.9rem 1.1rem; }
