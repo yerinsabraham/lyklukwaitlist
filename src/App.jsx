@@ -1,6 +1,30 @@
+import { useState } from 'react'
 import './App.css'
 
 function App() {
+  const [email, setEmail] = useState('')
+  const [status, setStatus] = useState('idle') // idle | loading | success | error
+  const [message, setMessage] = useState('')
+
+  async function handleSubmit(e){
+    e.preventDefault()
+    setStatus('loading'); setMessage('')
+    try {
+      const res = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      })
+      if (!res.ok) {
+        const data = await res.json().catch(()=>({}))
+        throw new Error(data?.error || 'Failed to join waitlist')
+      }
+      setStatus('success'); setMessage('Thanks! You\'re on the list.')
+      setEmail('')
+    } catch (err) {
+      setStatus('error'); setMessage(err.message || 'Something went wrong')
+    }
+  }
   return (
     <div className="app-shell">
       {/* Top Nav */}
@@ -26,13 +50,18 @@ function App() {
             We’re crafting a modern experience for creators and businesses. Join the waitlist to
             get early access when we launch.
           </p>
-          <form id="waitlist" className="waitlist" onSubmit={(e)=>{e.preventDefault(); alert('Thanks! We\'ll be in touch.')}}>
+          <form id="waitlist" className="waitlist" onSubmit={handleSubmit}>
             <label className="visually-hidden" htmlFor="email">Email address</label>
-            <input id="email" required name="email" type="email" placeholder="Enter your email" />
-            <button className="btn secondary" style={{background:'var(--color-secondary)',color:'#000',fontWeight:700}}>
+            <input id="email" required name="email" type="email" placeholder="Enter your email" value={email} onChange={(e)=>setEmail(e.target.value)} />
+            <button className="btn secondary" disabled={status==='loading'} style={{background:'var(--color-secondary)',color:'#000',fontWeight:700}}>
               Join waitlist
             </button>
           </form>
+          {status !== 'idle' && (
+            <p style={{marginTop:'0.75rem', fontWeight:600, color: status==='success' ? 'var(--color-secondary)' : '#ffd6d6'}}>
+              {status==='loading' ? 'Submitting…' : message}
+            </p>
+          )}
         </div>
       </section>
 
