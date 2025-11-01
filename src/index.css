@@ -67,7 +67,7 @@ section { padding: 64px 0; }
   background: white;
   border-radius: 20px;
   max-width: 90%;
-  margin: -40px auto 0;
+   margin: 60px auto 0;
   padding: 2.5rem 3rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   position: relative;
@@ -76,8 +76,8 @@ section { padding: 64px 0; }
 
 .partners-section h2 {
   text-align: center;
-  font-size: clamp(1.6rem, 3vw, 2rem);
-  font-weight: 700;
+   font-size: clamp(1.3rem, 2.5vw, 1.6rem);
+   font-weight: 600;
   color: var(--color-charcoal);
   margin: 0 0 2rem;
   font-family: 'Inter', sans-serif;
