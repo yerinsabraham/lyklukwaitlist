@@ -86,8 +86,9 @@ section { padding: 64px 0; }
 
 /* Features Grid Section - full-width white background */
 .features-grid-section {
-  background: #fff;
+  background: #fbf3ed;
   padding: 80px 0;
+  margin-top: 40px; /* breathing room after Partners */
 }
 .features-heading {
   text-align: center;
