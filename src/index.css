@@ -242,7 +242,8 @@ section { padding: 64px 0; }
   gap: 0.6rem;
   background: white;
   padding: 0.6rem 0.75rem;
-  border-radius: 9999px;
+  /* Make container more square with slight rounding */
+  border-radius: var(--radius-sm);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
   max-width: 550px;
 }
