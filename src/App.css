@@ -3,6 +3,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
+  background: url('/assets/images/background1.png') top center/cover no-repeat fixed;
 }
 
 /* Top navigation - floating transparent bar */
@@ -18,10 +19,10 @@
   justify-content: space-between;
   padding: 0 24px;
   backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.2);
   border-radius: 100px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 10;
 }
 
