@@ -229,7 +229,7 @@ section { padding: 64px 0; }
 /* Podcast Section */
 .podcast-section {
   padding: 60px 0;
-  margin-top: 8px;
+  margin-top: 0px;
 }
 .podcast-container {
   background: linear-gradient(90deg, #9a45cb 0%, #d880ef 50%, #fcdab4 100%);
