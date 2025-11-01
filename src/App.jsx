@@ -51,23 +51,51 @@ function App() {
       {/* Hero Section */}
       <section id="home" className="hero">
         <div className="container">
-          <h1>Experience payments that feel effortless</h1>
-          <p>
-            We’re crafting a modern experience for creators and businesses. Join the waitlist to
-            get early access when we launch.
-          </p>
-          <form id="waitlist" className="waitlist" onSubmit={handleSubmit}>
-            <label className="visually-hidden" htmlFor="email">Email address</label>
-            <input id="email" required name="email" type="email" placeholder="Enter your email" value={email} onChange={(e)=>setEmail(e.target.value)} />
-            <button className="btn secondary" disabled={status==='loading'} style={{background:'var(--color-secondary)',color:'#000',fontWeight:700}}>
-              Join waitlist
-            </button>
-          </form>
-          {status !== 'idle' && (
-            <p style={{marginTop:'0.75rem', fontWeight:600, color: status==='success' ? 'var(--color-secondary)' : '#ffd6d6'}}>
-              {status==='loading' ? 'Submitting…' : message}
+          <div className="hero-content">
+            <div className="hero-badge">
+              <span>⭐</span>
+              <span>2,947 people are waiting</span>
+            </div>
+            
+            <h1>
+              Own your culture.<br />
+              Grow your business.
+            </h1>
+            
+            <p className="hero-subtext">
+              The all-in-one platform connecting African entrepreneurs with their community. 
+              Shop, share, and celebrate culture—launching soon.
             </p>
-          )}
+            
+            <form className="waitlist-form" onSubmit={handleSubmit}>
+              <label className="visually-hidden" htmlFor="email">Email address</label>
+              <input 
+                id="email" 
+                required 
+                name="email" 
+                type="email" 
+                placeholder="Enter your email..." 
+                value={email} 
+                onChange={(e)=>setEmail(e.target.value)} 
+              />
+              <button className="btn-submit" type="submit" disabled={status==='loading'}>
+                Join waitlist
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </button>
+            </form>
+            
+            {status !== 'idle' && (
+              <p className={`waitlist-message ${status}`}>
+                {status==='loading' ? 'Submitting…' : message}
+              </p>
+            )}
+          </div>
+
+          <div className="hero-image">
+            <img src="/assets/images/image1.png" alt="App preview on phone" />
+          </div>
         </div>
       </section>
 
