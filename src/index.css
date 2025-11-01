@@ -163,7 +163,6 @@ section { padding: 64px 0; }
 
 /* Reach Shoppers Section */
 .reach-shoppers-section {
-  background: #faad14;
   padding: 60px 0;
   margin-top: 40px;
 }
@@ -171,6 +170,9 @@ section { padding: 64px 0; }
   background: #faad14;
   border-radius: 20px;
   padding: clamp(2rem, 4vw, 3rem);
+  max-width: 90%;
+  margin: 0 auto;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: clamp(2rem, 4vw, 3rem);
@@ -216,6 +218,8 @@ section { padding: 64px 0; }
   .reach-shoppers-container {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    max-width: 95%;
+    padding: 2rem 1.5rem;
   }
   .reach-shoppers-image { order: 0; }
   .reach-shoppers-content { order: 1; }
