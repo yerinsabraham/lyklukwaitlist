@@ -3,26 +3,24 @@
   display: flex;
   flex-direction: column;
   min-height: 100dvh;
-  background: url('/assets/images/background1.png') top center/cover no-repeat fixed;
 }
 
 /* Top navigation - floating transparent bar */
 .nav {
   position: fixed;
-  top: 20px;
+  top: 24px;
   left: 50%;
   transform: translateX(-50%);
   width: min(1100px, 90%);
-  height: 64px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 24px;
-  backdrop-filter: blur(10px);
-  background: rgba(0, 0, 0, 0.2);
+  padding: 1.2rem 2rem;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.8);
   border-radius: 100px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   z-index: 10;
 }
 
@@ -31,10 +29,11 @@
   align-items: center;
   gap: 10px;
   font-weight: 800;
-  color: white;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  font-size: 1.1rem;
+  color: var(--color-charcoal);
+  letter-spacing: 0.5px;
 }
-.nav .brand img { height: 32px; width: auto; display: block; }
+.nav .brand img { height: 36px; width: auto; display: block; }
 
 .nav .nav-links {
   display: flex;
@@ -44,19 +43,22 @@
   transform: translateX(-50%);
 }
 .nav .nav-links a {
-  color: white;
+  color: var(--color-charcoal);
   font-weight: 600;
   font-size: 0.95rem;
-  text-shadow: 0 1px 2px rgba(0,0,0,0.15);
-  transition: opacity 0.2s;
+  transition: color 0.2s;
 }
-.nav .nav-links a:hover { opacity: 0.8; }
+.nav .nav-links a:hover { color: var(--color-primary); }
+
+@media (max-width: 768px) {
+  .nav .nav-links { display: none; }
+}
 
 .nav .nav-cta {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
+  padding: 0.65rem 1.5rem;
   background: var(--color-primary);
   color: white;
   border-radius: 50px;
@@ -68,10 +70,18 @@
 .nav .nav-cta:hover {
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(106, 13, 173, 0.4);
+  background: #7a1abd;
 }
 .nav .nav-cta svg {
   width: 16px;
   height: 16px;
+}
+
+@media (max-width: 768px) {
+  .nav { padding: 0.9rem 1.5rem; }
+  .nav .brand { font-size: 1rem; }
+  .nav .brand img { height: 28px; }
+  .nav .nav-cta { padding: 0.6rem 1.2rem; font-size: 0.85rem; }
 }
 
 .spacer { height: 100px; }

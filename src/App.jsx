@@ -31,7 +31,7 @@ function App() {
       <nav className="nav">
         <a className="brand" href="#home" aria-label="LykLuk Home">
           <img src={"/assets/icons/app%20logo.png"} alt="LykLuk Logo" />
-          <span>Lykluk</span>
+          <span>LYKLUK</span>
         </a>
         
         <div className="nav-links">
