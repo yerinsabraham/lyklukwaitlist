@@ -71,6 +71,7 @@
   display: inline-flex; align-items: center; gap: 10px;
   background: var(--color-primary); color: #fff;
   border: none; border-radius: 16px; padding: 0.9rem 1.25rem; font-weight: 700;
+  font-size: 16px;
   cursor: pointer; transition: transform .15s ease, filter .15s ease;
 }
 .cta:hover { transform: translateY(-1px); filter: brightness(1.05); }
@@ -86,6 +87,9 @@
   .circle2 { width: 280px; height: 280px; }
   .circle3 { width: 220px; height: 220px; }
   .mainImage { width: 220px; height: 220px; }
+  
+  .title { font-size: 32px; line-height: 38px; }
+  .subtitle { font-size: 16px; line-height: 26px; }
 }
 
 /* Optional orbit animation for decorative images */
