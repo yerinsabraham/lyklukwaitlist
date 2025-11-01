@@ -29,16 +29,22 @@ function App() {
     <div className="app-shell">
       {/* Top Nav */}
       <nav className="nav">
-        <div className="container" style={{display:'flex',justifyContent:'space-between',width:'min(1200px,92%)'}}>
-          <a className="brand" href="#home" aria-label="LykLuk Home">
-            <img src={"/assets/icons/app%20logo.png"} alt="LykLuk Logo" />
-            <span>Lykluk</span>
-          </a>
-          <div style={{display:'flex',gap:'12px'}}>
-            <a className="btn ghost" href="#features">Features</a>
-            <a className="btn primary" href="#waitlist">Join waitlist</a>
-          </div>
+        <a className="brand" href="#home" aria-label="LykLuk Home">
+          <img src={"/assets/icons/app%20logo.png"} alt="LykLuk Logo" />
+          <span>Lykluk</span>
+        </a>
+        
+        <div className="nav-links">
+          <a href="#about">About</a>
+          <a href="#faq">FAQ</a>
         </div>
+
+        <a className="nav-cta" href="#waitlist">
+          Join Waitlist
+          <svg viewBox="0 0 20 20" fill="currentColor">
+            <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+          </svg>
+        </a>
       </nav>
       <div className="spacer" />
 
