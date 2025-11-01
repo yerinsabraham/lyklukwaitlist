@@ -24,7 +24,7 @@ html, body, #root {
 body {
   margin: 0;
   min-width: 320px;
-  background: var(--color-primary);
+  background: url('/assets/images/background1.png') center/cover no-repeat fixed;
   color: var(--color-charcoal);
 }
 
@@ -67,16 +67,9 @@ section { padding: 64px 0; }
   display: flex;
   align-items: center;
   color: white;
-  background: url('/assets/images/background1.png') center/cover no-repeat fixed;
   padding: 0 5%;
 }
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.25) 100%);
-  pointer-events: none;
-}
+
 .hero > .container { 
   position: relative; 
   z-index: 1; 
