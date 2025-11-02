@@ -12,6 +12,8 @@ function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const menuBtnRef = useRef(null)
   const menuRef = useRef(null)
+  const [mobileMenuClosing, setMobileMenuClosing] = useState(false)
+  const closeTimeoutRef = useRef(null)
 
   async function handleSubmit(e){
     e.preventDefault()
@@ -43,7 +45,12 @@ function App() {
     function handleOutside(e) {
       const target = e.target;
       if (menuRef.current && !menuRef.current.contains(target) && menuBtnRef.current && !menuBtnRef.current.contains(target)) {
-        setMobileMenuOpen(false);
+        // animate close so CSS transition can run
+        setMobileMenuClosing(true);
+        closeTimeoutRef.current = setTimeout(() => {
+          setMobileMenuOpen(false);
+          setMobileMenuClosing(false);
+        }, 200);
       }
     }
 
@@ -55,6 +62,15 @@ function App() {
       document.removeEventListener('touchstart', handleOutside);
     };
   }, [mobileMenuOpen]);
+  
+  // cleanup timeout when component unmounts
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current) {
+        clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
   return (
     <div className="app-shell">
       {/* Top Nav */}
@@ -72,7 +88,19 @@ function App() {
         <button 
           ref={menuBtnRef}
           className="mobile-menu-btn" 
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onClick={() => {
+            if (mobileMenuOpen) {
+              // start animated close
+              setMobileMenuClosing(true);
+              closeTimeoutRef.current = setTimeout(() => {
+                setMobileMenuOpen(false);
+                setMobileMenuClosing(false);
+              }, 200);
+            } else {
+              // open immediately
+              setMobileMenuOpen(true);
+            }
+          }}
           aria-label="Menu"
         >
           <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
@@ -82,13 +110,31 @@ function App() {
           </svg>
         </button>
 
-        {mobileMenuOpen && (
+        {(mobileMenuOpen || mobileMenuClosing) && (
           <>
-            <div className="mobile-menu-overlay" onClick={() => setMobileMenuOpen(false)} />
-            <div ref={menuRef} className="mobile-menu-dropdown">
-              <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
-              <a href="#faq" onClick={() => setMobileMenuOpen(false)}>FAQ</a>
-              <a className="dropdown-cta" href="#waitlist" onClick={() => setMobileMenuOpen(false)}>
+            <div
+              className={`mobile-menu-overlay ${mobileMenuClosing ? 'closing' : ''}`}
+              onClick={() => {
+                setMobileMenuClosing(true);
+                closeTimeoutRef.current = setTimeout(() => {
+                  setMobileMenuOpen(false);
+                  setMobileMenuClosing(false);
+                }, 200);
+              }}
+            />
+            <div ref={menuRef} className={`mobile-menu-dropdown ${mobileMenuClosing ? 'closing' : ''}`}>
+              <a href="#about" onClick={() => {
+                setMobileMenuClosing(true);
+                closeTimeoutRef.current = setTimeout(() => { setMobileMenuOpen(false); setMobileMenuClosing(false); }, 200);
+              }}>About</a>
+              <a href="#faq" onClick={() => {
+                setMobileMenuClosing(true);
+                closeTimeoutRef.current = setTimeout(() => { setMobileMenuOpen(false); setMobileMenuClosing(false); }, 200);
+              }}>FAQ</a>
+              <a className="dropdown-cta" href="#waitlist" onClick={() => {
+                setMobileMenuClosing(true);
+                closeTimeoutRef.current = setTimeout(() => { setMobileMenuOpen(false); setMobileMenuClosing(false); }, 200);
+              }}>
                 Join Waitlist
               </a>
             </div>

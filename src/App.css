@@ -21,7 +21,7 @@
   border-radius: 100px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  z-index: 10;
+  z-index: 1200; /* raised to create a consistent stacking context for dropdowns/overlays */
 }
 
 .nav .brand {
@@ -106,7 +106,13 @@ footer { padding: 32px 0; color: #6b6b6b; text-align: center; }
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.3);
-  z-index: 999;
+  z-index: 1190; /* sits below the dropdown but above page content */
+  transition: opacity 200ms ease;
+  opacity: 1;
+}
+.mobile-menu-overlay.closing {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .mobile-menu-dropdown {
@@ -119,7 +125,15 @@ footer { padding: 32px 0; color: #6b6b6b; text-align: center; }
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
   padding: 0.75rem;
   min-width: 140px;
-  z-index: 1000;
+  z-index: 1191; /* sits above overlay */
+  transition: opacity 180ms ease, transform 180ms ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+.mobile-menu-dropdown.closing {
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
 }
 
 .mobile-menu-dropdown a {
@@ -155,4 +169,10 @@ footer { padding: 32px 0; color: #6b6b6b; text-align: center; }
 }
 .mobile-menu-dropdown .dropdown-cta:hover {
   filter: brightness(1.05);
+}
+
+/* Ensure dropdown sits above overlay and animate open/close smoothly */
+.mobile-menu-dropdown,
+.mobile-menu-overlay {
+  will-change: opacity, transform;
 }
