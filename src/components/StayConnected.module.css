@@ -87,7 +87,7 @@
   align-items: center;
   gap: 40px;
   height: 100%;
-  animation: scrollGallery 24s linear infinite;
+  animation: scrollGallery 30s linear infinite;
   will-change: transform; /* hint for smooth hardware-accelerated animation */
 }
 @keyframes scrollGallery {
@@ -126,7 +126,7 @@
   .galleryWrapper { height: auto; padding: 10px 0; }
   .galleryTrack { 
     gap: 18px;
-    animation-duration: 14s; /* faster on mobile for more dynamic feel */
+  animation-duration: 18s; /* slightly slower on mobile for better readability */
   }
   .galleryTrack img,
   .galleryImage {
