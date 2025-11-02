@@ -1,5 +1,5 @@
 .stayConnectedSection {
-  background: var(--color-primary, #6A0DAD);
+  background: transparent; /* Show original site background for comparison */
   padding: 64px 0 48px 0;
   color: #fff;
   position: relative;
@@ -122,11 +122,11 @@
 }
 .fadeLeft {
   left: 0;
-  background: linear-gradient(to right, #6A0DAD 80%, transparent 100%);
+  background: linear-gradient(to right, rgba(106,13,173,0.9) 80%, transparent 100%);
 }
 .fadeRight {
   right: 0;
-  background: linear-gradient(to left, #6A0DAD 80%, transparent 100%);
+  background: linear-gradient(to left, rgba(106,13,173,0.9) 80%, transparent 100%);
 }
 @media (max-width: 768px) {
   .contentWrapper { align-items: center; }
