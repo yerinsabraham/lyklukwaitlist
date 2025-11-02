@@ -52,7 +52,11 @@ body {
 @media (max-width: 768px) {
   body {
     /* show the whole image without over-zooming; use contain so full image is visible */
-    background-size: contain;
+    /* enlarge the hero background slightly so it visually extends into the
+       partners section (covers hero + second section). Use a slightly larger
+       size rather than repeating the image — keeps it crisp and avoids
+       duplication. */
+    background-size: 140% auto;
     background-position: center top;
     /* background-attachment: fixed can cause odd zooming on mobile; switch to scroll */
     background-attachment: scroll;
@@ -451,15 +455,17 @@ section { padding: 64px 0; }
 /* Responsive */
 @media (max-width: 768px) {
   .partners-section {
-    padding: 2rem 1.5rem;
-    max-width: 95%;
-    /* On mobile let the site background (hero image) bleed through so the partners
-       section visually continues the hero background. Keep spacing but remove the
-       white card look so the hero image extends down into this section. */
-    background: transparent;
-    box-shadow: none;
-    border-radius: 0;
-    margin-top: 0;
+   padding: 2rem 1.5rem;
+   max-width: 95%;
+   /* Restore the white rounded card look for logo tiles but make it slightly
+     translucent so the hero background image is perceptible behind it. This
+     keeps the original card affordance while allowing the enlarged hero
+     background to show through subtly. */
+   background: rgba(255,255,255,0.92);
+   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+   border-radius: 24px;
+   margin: 60px auto 0;
+   transition: box-shadow 0.3s ease;
   }
   .partners-track {
     gap: 30px;
