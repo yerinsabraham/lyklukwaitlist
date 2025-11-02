@@ -1,5 +1,5 @@
 .whereSection {
-  padding: 48px 0 0 0;
+  padding: 8px 0 0 0; /* tightened top padding to be very close to the previous section */
   display: flex;
   justify-content: center;
 }
@@ -36,7 +36,7 @@
 .joinBtn svg { width: 18px; height: 18px; }
 
 /* Footer overlap spacing - the footer will sit under this and overlap */
-.whereSection { margin-bottom: 48px; }
+.whereSection { margin-bottom: 12px; }
 
 
 @media (max-width: 900px) {

@@ -1,6 +1,6 @@
 .stayConnectedSection {
   background: transparent; /* Show original site background for comparison */
-  padding: 64px 0 48px 0;
+  padding: 28px 0 8px 0; /* tightened vertical spacing further */
   color: #fff;
   position: relative;
 }
