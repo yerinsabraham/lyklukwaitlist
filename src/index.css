@@ -159,6 +159,10 @@ section { padding: 64px 0; }
   line-height: 1.35;
 }
 .features-col .feature-card { padding: clamp(0.8rem, 1.6vw, 1rem); }
+
+/* stronger override for right-column cards: more specific and placed after defaults */
+.features-col--right .feature-card .feature-title { font-size: 1rem !important; line-height: 1.25; }
+.features-col--right .feature-card .feature-desc { font-size: 0.92rem !important; line-height: 1.35; }
 .features-image { display: flex; align-items: center; justify-content: center; }
 .features-image img {
   width: 100%;

@@ -189,11 +189,10 @@ export default function Home() {
 
               <div className="feature-card card-deeppurple">
                 <div className="feature-icon" aria-hidden="true">
-                  {/* Ads / megaphone icon */}
+                  {/* Edit / pencil icon for Creators Ad Suite */}
                   <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M3 11v6a2 2 0 0 0 2 2h3" />
-                    <path d="M21 7v6a2 2 0 0 1-2 2h-3" />
-                    <path d="M8 7V3l11 4v4" />
+                    <path d="M12 20h9" />
+                    <path d="M16.5 3.5a2.121 2.121 0 113 3L7 19l-4 1 1-4L16.5 3.5z" />
                   </svg>
                 </div>
                 <h3 className="feature-title">Creators Ad Suite</h3>
