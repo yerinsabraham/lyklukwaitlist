@@ -75,9 +75,9 @@
 .galleryWrapper {
   position: relative;
   width: 100%;
-  max-width: 860px;
-  height: 220px;
-  margin-top: 24px;
+  max-width: 920px;
+  height: 260px; /* increased wrapper to accommodate larger images on desktop */
+  margin-top: 28px;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -85,7 +85,7 @@
 .galleryTrack {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: 40px;
   height: 100%;
   animation: scrollGallery 18s linear infinite;
 }
@@ -96,17 +96,17 @@
 
 .galleryTrack img,
 .galleryImage {
-  height: 180px;
+  height: 220px; /* larger visual size on desktop */
   width: auto;
   border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 8px 26px rgba(0,0,0,0.16);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.16);
 }
 
 @media (max-width: 1024px) {
-  .galleryWrapper { height: 180px; }
+  .galleryWrapper { height: 220px; max-width: 860px; }
   .galleryTrack img,
-  .galleryImage { height: 140px; }
+  .galleryImage { height: 180px; }
 }
 
 /* Apply the dark overlay + background image only on mobile to improve contrast for white text */
@@ -122,12 +122,12 @@
 
 /* Mobile: show the full image frames (no cropping) and avoid overly tall wrapper */
 @media (max-width: 768px) {
-  .galleryWrapper { height: auto; padding: 8px 0; }
-  .galleryTrack { gap: 16px; }
+  .galleryWrapper { height: auto; padding: 10px 0; }
+  .galleryTrack { gap: 18px; }
   .galleryTrack img,
   .galleryImage {
     height: auto;
-    max-height: 100px; /* constrain visual height */
+    max-height: 140px; /* larger mobile images so they're more readable */
     width: auto;
     object-fit: contain; /* show the whole image without cropping */
     border-radius: 12px;
