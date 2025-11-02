@@ -1,11 +1,6 @@
 .stayConnectedSection {
-  /* Use a darker overlay so white text remains visible when the page background is light on mobile.
-     Blend the site's background image with a semi-opaque gradient to preserve visual continuity. */
-  background: linear-gradient(180deg, rgba(6,6,10,0.78), rgba(6,6,10,0.6)), url('/assets/images/background1.png?v=20251102');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: scroll;
+  /* Default: transparent so desktop/web appearance uses the site's main background. */
+  background: transparent;
   padding: 28px 0 8px 0; /* tightened vertical spacing further */
   color: #fff;
   position: relative;
@@ -112,6 +107,17 @@
   .galleryWrapper { height: 180px; }
   .galleryTrack img,
   .galleryImage { height: 140px; }
+}
+
+/* Apply the dark overlay + background image only on mobile to improve contrast for white text */
+@media (max-width: 768px) {
+  .stayConnectedSection {
+    background: linear-gradient(180deg, rgba(6,6,10,0.78), rgba(6,6,10,0.6)), url('/assets/images/background1.png?v=20251102');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+  }
 }
 
 /* Mobile: show the full image frames (no cropping) and avoid overly tall wrapper */
