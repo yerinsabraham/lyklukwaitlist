@@ -453,6 +453,13 @@ section { padding: 64px 0; }
   .partners-section {
     padding: 2rem 1.5rem;
     max-width: 95%;
+    /* On mobile let the site background (hero image) bleed through so the partners
+       section visually continues the hero background. Keep spacing but remove the
+       white card look so the hero image extends down into this section. */
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    margin-top: 0;
   }
   .partners-track {
     gap: 30px;
