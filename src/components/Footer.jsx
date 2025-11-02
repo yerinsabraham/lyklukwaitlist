@@ -45,10 +45,29 @@ export default function Footer(){
           </form>
 
           <div className={styles.socials}>
-            <a href="#" aria-label="Instagram" dangerouslySetInnerHTML={{__html:`<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" width=\"20\" height=\"20\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\" /><path d=\"M16 11.37A4 4 0 1112.63 8\" /></svg>`}} />
+            {/* Instagram */}
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.5A3.5 3.5 0 1015.5 12 3.5 3.5 0 0012 8.5zM18.5 6a1 1 0 11-1 1 1 1 0 011-1z" />
+              </svg>
+            </a>
+
+            {/* LinkedIn (kept) */}
             <a href="#" aria-label="LinkedIn"> <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.07c.67-1.27 2.3-2.6 4.74-2.6 5.07 0 6 3.33 6 7.66V24h-5v-7.2c0-1.72-.03-3.95-2.4-3.95-2.4 0-2.76 1.87-2.76 3.8V24h-5V8z"/></svg></a>
-            <a href="#" aria-label="Twitter"> <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0016 3a4.5 4.5 0 00-4.5 4.5c0 .35.04.7.11 1.03A12.94 12.94 0 013 4.1a4.5 4.5 0 001.39 6A4.41 4.41 0 012.8 9.7v.06A4.5 4.5 0 004.5 14a4.52 4.52 0 01-2 .08 4.5 4.5 0 004.2 3.13A9 9 0 012 19.54 12.74 12.74 0 008.29 21c7.55 0 11.68-6.26 11.68-11.68v-.53A8.18 8.18 0 0023 3z"/></svg></a>
-            <a href="mailto:hello@lykluk.com" aria-label="Email"> <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M2 4h20v16H2z"/></svg></a>
+
+            {/* X (formerly Twitter) */}
+            <a href="#" aria-label="X"> 
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.3 5.71a1 1 0 10-1.41-1.41L12 9.17 7.11 4.29A1 1 0 105.7 5.7L10.59 10.6 5.7 15.49a1 1 0 101.41 1.41L12 12.99l4.89 4.91a1 1 0 001.41-1.41L13.41 11.6 18.3 6.71z" />
+              </svg>
+            </a>
+
+            {/* Email (envelope) */}
+            <a href="mailto:Info@lykluk.com" aria-label="Email"> 
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2 6a2 2 0 012-2h16a2 2 0 012 2v.01L12 13 2 6.01V6zm0 3.99V18a2 2 0 002 2h16a2 2 0 002-2V9l-10 6L2 9z" />
+              </svg>
+            </a>
           </div>
         </div>
       </div>
