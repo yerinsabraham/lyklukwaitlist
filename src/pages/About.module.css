@@ -1,0 +1,353 @@
+.aboutPage {
+  min-height: 100vh;
+  background: var(--color-whitesmoke, #F5F5F5);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #6A0DAD 0%, #8B33B8 100%);
+  color: white;
+  padding: 120px 0 80px 0;
+  text-align: center;
+}
+
+.heroContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroHeadline {
+  font-family: 'BricolageGrotesque', 'Inter', sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 800;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.2;
+}
+
+.heroSubheadline {
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  margin: 0 0 2.5rem 0;
+  opacity: 0.95;
+  line-height: 1.6;
+}
+
+.heroCTAs {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  background: white;
+  color: var(--color-primary, #6A0DAD);
+  border: none;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.btnPrimary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btnSecondary {
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btnSecondary:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Mission Section */
+.mission {
+  padding: 80px 0;
+  text-align: center;
+  background: white;
+}
+
+.sectionHeading {
+  font-family: 'BricolageGrotesque', 'Inter', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--color-primary, #6A0DAD);
+  margin: 0 0 1.5rem 0;
+}
+
+.missionText {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  color: var(--color-charcoal, #333);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+/* Experience Section */
+.experience {
+  padding: 80px 0;
+  background: var(--color-whitesmoke, #F5F5F5);
+}
+
+.experienceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.experienceCard {
+  background: white;
+  padding: 32px 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.experienceCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.cardIcon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.cardTitle {
+  font-family: 'BricolageGrotesque', 'Inter', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--color-primary, #6A0DAD);
+  margin: 0 0 12px 0;
+}
+
+.cardDesc {
+  font-size: 1rem;
+  color: var(--color-charcoal, #333);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Impact Section */
+.impact {
+  padding: 80px 0;
+  background: white;
+  text-align: center;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-top: 48px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.statCard {
+  padding: 24px;
+}
+
+.statNumber {
+  font-family: 'BricolageGrotesque', 'Inter', sans-serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  color: var(--color-primary, #6A0DAD);
+  margin-bottom: 8px;
+}
+
+.statLabel {
+  font-size: 1.1rem;
+  color: var(--color-charcoal, #333);
+  font-weight: 600;
+}
+
+/* Culture Section */
+.culture {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
+  text-align: center;
+  color: var(--color-charcoal, #333);
+}
+
+.cultureText {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  line-height: 1.8;
+}
+
+.cultureVisual {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.cultureTag {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Purpose Section */
+.purpose {
+  padding: 80px 0;
+  background: white;
+  text-align: center;
+}
+
+.purposeGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  margin-top: 48px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.purposeItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 24px;
+  background: var(--color-whitesmoke, #F5F5F5);
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+.purposeItem:hover {
+  transform: translateY(-2px);
+}
+
+.purposeIcon {
+  font-size: 2rem;
+}
+
+.purposeText {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-charcoal, #333);
+}
+
+/* Join Us Section */
+.joinUs {
+  padding: 100px 0;
+  background: var(--color-primary, #6A0DAD);
+  color: white;
+  text-align: center;
+}
+
+.joinUsText {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  margin: 0 0 2.5rem 0;
+  font-weight: 600;
+}
+
+.joinForm {
+  display: flex;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto 16px auto;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.joinInput {
+  flex: 1;
+  min-width: 250px;
+  padding: 0.9rem 1.5rem;
+  border-radius: 50px;
+  border: none;
+  font-size: 1rem;
+  outline: none;
+}
+
+.joinInput::placeholder {
+  color: #999;
+}
+
+.message {
+  margin-top: 16px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.message.success {
+  color: var(--color-secondary, #FFD700);
+}
+
+.message.error {
+  color: #ffd6d6;
+}
+
+.message.loading {
+  color: #E0E0E0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 0 60px 0;
+  }
+
+  .heroCTAs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .experienceGrid,
+  .statsGrid,
+  .purposeGrid {
+    gap: 24px;
+  }
+
+  .joinForm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .joinInput {
+    width: 100%;
+    min-width: auto;
+  }
+}

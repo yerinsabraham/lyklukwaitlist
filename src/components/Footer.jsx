@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
 
 export default function Footer(){
@@ -32,8 +33,8 @@ export default function Footer(){
             </div>
             <div>
               <h4>Company</h4>
-              <a href="#">About us</a>
-              <a href="#">FAQ</a>
+              <Link to="/about">About us</Link>
+              <Link to="/faq">FAQ</Link>
             </div>
           </div>
         </div>

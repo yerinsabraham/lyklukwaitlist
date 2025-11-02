@@ -33,8 +33,9 @@ html, body, #root {
   height: 100%;
 }
 
-/* Apply Bricolage Grotesque to all main headings (section titles) */
-h1, h2, h3 {
+/* Apply Bricolage Grotesque to all main headings (section titles) and common title classes
+   Include common component class names so CSS Modules that use `.title` / `.kicker` also get the font. */
+h1, h2, h3, .title, .kicker, .section-title, .features-heading {
   font-family: 'BricolageGrotesque', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   font-weight: 700;
 }

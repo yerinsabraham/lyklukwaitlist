@@ -1,0 +1,214 @@
+/* Top navigation - floating transparent bar */
+.nav {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(1100px, 90%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.75rem;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 100px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1200;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--color-charcoal, #333);
+  letter-spacing: 0.5px;
+  text-decoration: none;
+}
+
+.brand img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+.navLinks {
+  display: flex;
+  gap: 32px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navLinks a {
+  color: var(--color-charcoal, #333);
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: color 0.2s;
+  text-decoration: none;
+}
+
+.navLinks a:hover {
+  color: var(--color-primary, #6A0DAD);
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+  }
+}
+
+.navCta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0.55rem 1.3rem;
+  background: var(--color-primary, #6A0DAD);
+  color: white;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(106, 13, 173, 0.3);
+  border: none;
+  cursor: pointer;
+}
+
+.navCta:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(106, 13, 173, 0.4);
+  background: #7a1abd;
+}
+
+.navCta svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    padding: 0.9rem 1.5rem;
+  }
+
+  .brand {
+    font-size: 1rem;
+  }
+
+  .brand img {
+    height: 28px;
+  }
+
+  .navCta {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+    display: none;
+  }
+}
+
+/* Mobile menu button (hidden on desktop) */
+.mobileMenuBtn {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--color-charcoal, #333);
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: opacity 0.2s;
+}
+
+.mobileMenuBtn:hover {
+  opacity: 0.7;
+}
+
+/* Mobile menu overlay and dropdown */
+.mobileMenuOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1190;
+  transition: opacity 200ms ease;
+  opacity: 1;
+}
+
+.mobileMenuOverlay.closing {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.mobileMenuDropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  padding: 0.75rem;
+  min-width: 140px;
+  z-index: 1191;
+  transition: opacity 180ms ease, transform 180ms ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mobileMenuDropdown.closing {
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+}
+
+.mobileMenuDropdown a,
+.mobileMenuDropdown button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  color: var(--color-charcoal, #333);
+  font-weight: 600;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  transition: background 0.2s;
+  text-decoration: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: inherit;
+}
+
+.mobileMenuDropdown a:hover,
+.mobileMenuDropdown button:hover {
+  background: rgba(106, 13, 173, 0.08);
+  color: var(--color-primary, #6A0DAD);
+}
+
+@media (max-width: 768px) {
+  .mobileMenuBtn {
+    display: block;
+  }
+}
+
+/* Mobile dropdown CTA button */
+.dropdownCta {
+  margin-top: 0.4rem !important;
+  display: block;
+  text-align: center;
+  background: var(--color-primary, #6A0DAD) !important;
+  color: #fff !important;
+  font-weight: 800;
+  border-radius: 9999px;
+  padding: 0.75rem 1rem;
+  box-shadow: 0 4px 12px rgba(106, 13, 173, 0.25);
+}
+
+.dropdownCta:hover {
+  filter: brightness(1.05);
+  background: var(--color-primary, #6A0DAD) !important;
+}
+
+/* Ensure dropdown sits above overlay and animate open/close smoothly */
+.mobileMenuDropdown,
+.mobileMenuOverlay {
+  will-change: opacity, transform;
+}
