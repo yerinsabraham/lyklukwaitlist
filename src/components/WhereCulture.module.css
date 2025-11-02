@@ -1,0 +1,45 @@
+.whereSection {
+  padding: 48px 0 0 0;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  width: 100%;
+  max-width: 1180px;
+  padding: 0 20px;
+}
+.card {
+  background: var(--color-primary, #6A0DAD);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+.left img {
+  width: 260px;
+  height: auto;
+  border-radius: 14px;
+  object-fit: cover;
+}
+.right { flex: 1; color: #fff; }
+.kicker { margin: 0; font-size: 1.8rem; font-weight: 800; color: #fff; }
+.lead { margin: 10px 0 18px 0; color: rgba(255,255,255,0.92); max-width: 520px; }
+.form { display: flex; gap: 12px; align-items: center; }
+.form input { flex: 1; padding: 12px 14px; border-radius: 12px; border: none; outline: none; }
+.joinBtn { background: #fff; color: var(--color-primary, #6A0DAD); padding: 10px 16px; border-radius: 12px; border: none; font-weight: 700; display: inline-flex; gap: 8px; align-items: center; }
+.joinBtn svg { width: 18px; height: 18px; }
+
+/* Footer overlap spacing - the footer will sit under this and overlap */
+.whereSection + .footer-spacer {
+  height: 0; /* placeholder if needed */
+}
+
+@media (max-width: 900px) {
+  .card { flex-direction: column; text-align: center; padding: 20px; }
+  .left img { width: 220px; }
+  .form { flex-direction: column; width: 100%; }
+  .form input { width: 100%; }
+  .joinBtn { width: 100%; }
+}

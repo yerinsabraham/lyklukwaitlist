@@ -1,0 +1,32 @@
+.footer {
+  background: color-mix(in srgb, var(--color-primary, #6A0DAD) 20%, black 80%);
+  margin-top: -110px; /* pull up to overlap the WhereCulture card roughly 40% */
+  padding-top: 120px; /* space so content isn't cut off */
+  color: #fff;
+}
+.inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 20px 48px 20px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.left { display:flex; gap:20px; align-items:flex-start; }
+.logo img { width: 110px; }
+.links { display:flex; gap:28px; }
+.links h4{ margin:0 0 8px 0; }
+.links a{ display:block; color: rgba(255,255,255,0.92); margin-bottom:6px; text-decoration:none; }
+.right { display:flex; flex-direction:column; gap:12px; align-items:flex-end; }
+.form { display:flex; gap:8px; }
+.form input{ padding:10px 12px; border-radius:10px; border:none; }
+.btn{ padding:10px 14px; border-radius:10px; background:#fff; color:var(--color-primary,#6A0DAD); border:none; font-weight:700; }
+.socials { display:flex; gap:10px; margin-top:12px; }
+.socials a{ color:#fff; opacity:0.95; display:inline-flex; align-items:center; }
+
+@media (max-width: 900px) {
+  .inner { flex-direction: column; align-items: center; text-align: center; }
+  .right { align-items: center; }
+  .links { flex-direction: row; gap:18px; }
+}

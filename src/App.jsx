@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import BuiltForYou from './components/BuiltForYou'
 import StayConnected from './components/StayConnected'
+import WhereCulture from './components/WhereCulture'
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
@@ -290,9 +292,11 @@ function App() {
 
   <StayConnected />
 
-      <footer>
-        <div className="container">© {new Date().getFullYear()} Lykluk Digital</div>
-      </footer>
+  {/* New WhereCulture section placed above footer */}
+  <WhereCulture />
+
+  {/* Footer component with overlap */}
+  <Footer />
     </div>
   )
 }
