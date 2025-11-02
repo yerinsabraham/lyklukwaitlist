@@ -285,10 +285,10 @@ function App() {
         </div>
       </section>
 
-      <StayConnected />
+  {/* Built For You Hero Section - Move to last section before footer */}
+  <BuiltForYou />
 
-      {/* Built For You Hero Section - Move to last section before footer */}
-      <BuiltForYou />
+  <StayConnected />
 
       <footer>
         <div className="container">© {new Date().getFullYear()} Lykluk Digital</div>

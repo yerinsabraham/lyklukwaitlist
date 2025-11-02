@@ -19,6 +19,7 @@
   flex-direction: column;
   align-items: center;
   gap: 18px;
+  text-align: center;
 }
 .badge {
   display: inline-flex;
@@ -74,7 +75,7 @@
   position: relative;
   width: 100%;
   max-width: 860px;
-  height: 120px;
+  height: 220px;
   margin-top: 24px;
   overflow: hidden;
   display: flex;
@@ -83,7 +84,7 @@
 .galleryTrack {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 36px;
   height: 100%;
   animation: scrollGallery 18s linear infinite;
 }
@@ -92,12 +93,27 @@
   100% { transform: translateX(-50%); }
 }
 
-.galleryTrack img {
-  height: 100px;
+.galleryTrack img,
+.galleryImage {
+  height: 180px;
   width: auto;
   border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.16);
+}
+
+@media (max-width: 1024px) {
+  .galleryWrapper { height: 180px; }
+  .galleryTrack img,
+  .galleryImage { height: 140px; }
+}
+
+@media (max-width: 768px) {
+  .galleryWrapper { height: 120px; }
+  .galleryTrack img,
+  .galleryImage { height: 100px; }
+  .title { font-size: 1.6rem; }
+  .subtitle { font-size: 0.92rem; }
 }
 .fadeLeft, .fadeRight {
   position: absolute;
