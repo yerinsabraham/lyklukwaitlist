@@ -255,14 +255,6 @@ export default function Home() {
         </div>
       </section>
 
-  {/* Built For You Hero Section - Move to last section before footer */}
-  <BuiltForYou onCTAClick={scrollToHeroAndFocus} />
-
-  <StayConnected />
-
-  {/* New WhereCulture section placed above footer */}
-  <WhereCulture />
-
   {/* Built For You Hero Section */}
   <BuiltForYou onCTAClick={scrollToHeroAndFocus} />
 

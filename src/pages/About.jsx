@@ -44,7 +44,7 @@ export default function About() {
             </p>
             <div className={styles.heroCTAs}>
               <button className={styles.btnPrimary} onClick={() => document.getElementById('join-us')?.scrollIntoView({ behavior: 'smooth' })}>
-                Sign Up Today
+                Join Waitlist Today
               </button>
               <button className={styles.btnSecondary} onClick={() => document.getElementById('mission')?.scrollIntoView({ behavior: 'smooth' })}>
                 Learn More
@@ -178,7 +178,7 @@ export default function About() {
               className={styles.joinInput}
             />
             <button type="submit" className={styles.btnPrimary} disabled={status === 'loading'}>
-              Sign Up Today
+              Join Waitlist
             </button>
           </form>
           {status !== 'idle' && (
