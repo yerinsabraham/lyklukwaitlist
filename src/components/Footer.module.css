@@ -1,20 +1,25 @@
 .footer {
-  background: color-mix(in srgb, var(--color-primary, #6A0DAD) 20%, black 80%);
-  margin-top: -110px; /* pull up to overlap the WhereCulture card roughly 40% */
-  padding-top: 120px; /* space so content isn't cut off */
+  /* darker variant of primary color as footer background */
+  background: color-mix(in srgb, var(--color-primary, #6A0DAD) 30%, black 70%);
+  margin-top: 0; /* remove negative margin so footer no longer covers the previous section */
+  padding-top: 48px;
   color: #fff;
+  position: relative;
+  z-index: 1;
 }
 .inner {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 28px 20px 48px 20px;
+  padding: 18px 20px 48px 20px;
   display: flex;
   gap: 24px;
   align-items: flex-start;
   justify-content: space-between;
 }
-.left { display:flex; gap:20px; align-items:flex-start; }
-.logo img { width: 110px; }
+.left { display:flex; gap:20px; align-items:center; }
+.logo { display:flex; align-items:center; gap:12px; }
+.logo img { width: 72px; height: auto; }
+.brandName { font-weight:800; font-size:1.05rem; color:#fff; letter-spacing:0.04em; }
 .links { display:flex; gap:28px; }
 .links h4{ margin:0 0 8px 0; }
 .links a{ display:block; color: rgba(255,255,255,0.92); margin-bottom:6px; text-decoration:none; }

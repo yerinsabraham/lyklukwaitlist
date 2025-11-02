@@ -20,7 +20,10 @@ export default function Footer(){
     <footer className={styles.footer}>
       <div className={styles.inner}>
         <div className={styles.left}>
-          <div className={styles.logo}><img src="/assets/icons/app%20logo.png" alt="Lykluk"/></div>
+          <div className={styles.logo}>
+            <img src="/assets/icons/app%20logo.png" alt="Lykluk"/>
+            <span className={styles.brandName}>Lykluk</span>
+          </div>
           <div className={styles.links}>
             <div>
               <h4>Legal</h4>

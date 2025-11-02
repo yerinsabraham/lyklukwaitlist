@@ -9,13 +9,17 @@
   padding: 0 20px;
 }
 .card {
-  background: var(--color-primary, #6A0DAD);
+  /* gradient overlay blended with primary color as base */
+  background: linear-gradient(180deg, #fedeb1 0%, #e498e4 50%, #8c37c3 100%), var(--color-primary, #6A0DAD);
+  background-blend-mode: overlay;
   border-radius: 20px;
   padding: 28px;
   display: flex;
   gap: 24px;
   align-items: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  position: relative;
+  z-index: 2; /* ensure card sits above footer */
 }
 .left img {
   width: 260px;
@@ -32,9 +36,8 @@
 .joinBtn svg { width: 18px; height: 18px; }
 
 /* Footer overlap spacing - the footer will sit under this and overlap */
-.whereSection + .footer-spacer {
-  height: 0; /* placeholder if needed */
-}
+.whereSection { margin-bottom: 48px; }
+
 
 @media (max-width: 900px) {
   .card { flex-direction: column; text-align: center; padding: 20px; }
