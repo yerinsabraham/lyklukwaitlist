@@ -34,6 +34,21 @@ function App() {
       setStatus('error'); setMessage(err.message || 'Something went wrong')
     }
   }
+
+  // Scroll to hero and focus the email input (smooth) — used by CTAs across the page
+  function scrollToHeroAndFocus(e) {
+    if (e && typeof e.preventDefault === 'function') e.preventDefault();
+    const input = document.getElementById('email');
+    const hero = document.getElementById('home');
+    if (hero) {
+      hero.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    // Wait a short time for the scroll to begin/complete before focusing.
+    // Immediate focus sometimes works; we add a slightly delayed focus for reliability.
+    setTimeout(() => {
+      if (input) input.focus({ preventScroll: true });
+    }, 350);
+  }
   
   useEffect(() => {
     if (!mobileMenuOpen) return;
@@ -312,7 +327,7 @@ function App() {
               Promote your products on Lykluk and connect with customers actively looking to buy. 
               No account needed, just submit your ad & start selling.
             </p>
-            <a href="#advertise" className="btn-advertise">
+            <a href="#advertise" className="btn-advertise" onClick={scrollToHeroAndFocus}>
               Advertise Your Product
               <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
                 <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
@@ -363,7 +378,7 @@ function App() {
       </section>
 
   {/* Built For You Hero Section - Move to last section before footer */}
-  <BuiltForYou />
+  <BuiltForYou onCTAClick={scrollToHeroAndFocus} />
 
   <StayConnected />
 

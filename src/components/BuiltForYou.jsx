@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './BuiltForYou.module.css'
 
-export default function BuiltForYou() {
+export default function BuiltForYou({ onCTAClick }) {
   return (
     <section className={styles.section}>
       <div className={styles.container}>
@@ -35,7 +35,7 @@ export default function BuiltForYou() {
           <p className={styles.subtitle}>
             Share your traditional recipes, your language, your music, your heritage. This isn't a platform where African content gets buried or your account gets shadowbanned for being "too cultural."
           </p>
-          <button className={styles.cta}>
+          <button className={styles.cta} onClick={onCTAClick}>
             Get early access
             <svg viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
               <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
