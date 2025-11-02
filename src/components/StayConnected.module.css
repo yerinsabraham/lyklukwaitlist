@@ -1,5 +1,11 @@
 .stayConnectedSection {
-  background: transparent; /* Show original site background for comparison */
+  /* Use a darker overlay so white text remains visible when the page background is light on mobile.
+     Blend the site's background image with a semi-opaque gradient to preserve visual continuity. */
+  background: linear-gradient(180deg, rgba(6,6,10,0.78), rgba(6,6,10,0.6)), url('/assets/images/background1.png?v=20251102');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
   padding: 28px 0 8px 0; /* tightened vertical spacing further */
   color: #fff;
   position: relative;
