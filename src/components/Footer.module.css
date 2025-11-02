@@ -18,7 +18,7 @@
 }
 .left { display:flex; gap:20px; align-items:center; }
 .logo { display:flex; align-items:center; gap:12px; }
-.logo img { width: 72px; height: auto; }
+.logo img { width: 56px; height: auto; }
 .brandName { font-weight:800; font-size:1.05rem; color:#fff; letter-spacing:0.04em; }
 .links { display:flex; gap:28px; }
 .links h4{ margin:0 0 8px 0; }
@@ -34,4 +34,5 @@
   .inner { flex-direction: column; align-items: center; text-align: center; }
   .right { align-items: center; }
   .links { flex-direction: row; gap:18px; }
+  .logo img { width: 44px; }
 }

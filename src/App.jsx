@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import BuiltForYou from './components/BuiltForYou'
 import StayConnected from './components/StayConnected'
 import WhereCulture from './components/WhereCulture'
@@ -10,6 +10,8 @@ function App() {
   const [status, setStatus] = useState('idle') // idle | loading | success | error
   const [message, setMessage] = useState('')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const menuBtnRef = useRef(null)
+  const menuRef = useRef(null)
 
   async function handleSubmit(e){
     e.preventDefault()
@@ -30,6 +32,29 @@ function App() {
       setStatus('error'); setMessage(err.message || 'Something went wrong')
     }
   }
+  
+  useEffect(() => {
+    if (!mobileMenuOpen) return;
+    // only enable outside-click closing on mobile sizes
+    if (typeof window === 'undefined') return;
+    const mq = window.matchMedia('(max-width: 768px)');
+    if (!mq.matches) return;
+
+    function handleOutside(e) {
+      const target = e.target;
+      if (menuRef.current && !menuRef.current.contains(target) && menuBtnRef.current && !menuBtnRef.current.contains(target)) {
+        setMobileMenuOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleOutside);
+    document.addEventListener('touchstart', handleOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleOutside);
+      document.removeEventListener('touchstart', handleOutside);
+    };
+  }, [mobileMenuOpen]);
   return (
     <div className="app-shell">
       {/* Top Nav */}
@@ -45,6 +70,7 @@ function App() {
         </div>
 
         <button 
+          ref={menuBtnRef}
           className="mobile-menu-btn" 
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Menu"
@@ -59,7 +85,7 @@ function App() {
         {mobileMenuOpen && (
           <>
             <div className="mobile-menu-overlay" onClick={() => setMobileMenuOpen(false)} />
-            <div className="mobile-menu-dropdown">
+            <div ref={menuRef} className="mobile-menu-dropdown">
               <a href="#about" onClick={() => setMobileMenuOpen(false)}>About</a>
               <a href="#faq" onClick={() => setMobileMenuOpen(false)}>FAQ</a>
               <a className="dropdown-cta" href="#waitlist" onClick={() => setMobileMenuOpen(false)}>
@@ -68,6 +94,9 @@ function App() {
             </div>
           </>
         )}
+
+        {/* Close the mobile dropdown when clicking outside it (mobile only) */}
+        { /* useEffect-like behavior via hook below handles this; see effect */ }
 
         <a className="nav-cta" href="#waitlist">
           Join Waitlist
