@@ -87,11 +87,12 @@
   align-items: center;
   gap: 40px;
   height: 100%;
-  animation: scrollGallery 18s linear infinite;
+  animation: scrollGallery 24s linear infinite;
+  will-change: transform; /* hint for smooth hardware-accelerated animation */
 }
 @keyframes scrollGallery {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-66.666%); } /* adjust for triple loop (3 sets) */
 }
 
 .galleryTrack img,
@@ -123,7 +124,10 @@
 /* Mobile: show the full image frames (no cropping) and avoid overly tall wrapper */
 @media (max-width: 768px) {
   .galleryWrapper { height: auto; padding: 10px 0; }
-  .galleryTrack { gap: 18px; }
+  .galleryTrack { 
+    gap: 18px;
+    animation-duration: 14s; /* faster on mobile for more dynamic feel */
+  }
   .galleryTrack img,
   .galleryImage {
     height: auto;

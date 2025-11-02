@@ -31,7 +31,8 @@ export default function StayConnected() {
         </div>
         <div className={styles.galleryWrapper}>
           <div className={styles.galleryTrack}>
-            {galleryImages.concat(galleryImages).map((src, i) => (
+            {/* Triple the images for seamless loop without flashing */}
+            {galleryImages.concat(galleryImages, galleryImages).map((src, i) => (
               <img
                 key={i}
                 src={src}
