@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import BuiltForYou from './components/BuiltForYou'
+import StayConnected from './components/StayConnected'
 import './App.css'
 
 function App() {
@@ -283,6 +284,8 @@ function App() {
           </div>
         </div>
       </section>
+
+      <StayConnected />
 
       {/* Built For You Hero Section - Move to last section before footer */}
       <BuiltForYou />
