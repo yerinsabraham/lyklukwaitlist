@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './StayConnected.module.css';
-import { ReactComponent as ArrowIcon } from '../assets/icons/arrow-right.svg'; // If you have an SVG arrow icon
 
 const galleryImages = [
   '/assets/images/Row/1.png',
@@ -24,7 +23,10 @@ export default function StayConnected() {
           <h2 className={styles.title}>Talk to Your People Without the Algorithm Drama</h2>
           <p className={styles.subtitle}>Direct Messages That Actually Feel Direct. No weird rules, just real conversations with people who care about you.</p>
           <button className={styles.cta}>
-            Get Early Access <ArrowIcon className={styles.arrow} />
+            Get Early Access 
+            <svg className={styles.arrow} viewBox="0 0 20 20" fill="currentColor">
+              <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
           </button>
         </div>
         <div className={styles.galleryWrapper}>
@@ -34,7 +36,7 @@ export default function StayConnected() {
                 key={i}
                 src={src}
                 alt={`Gallery ${i+1}`}
-                style={{ height: '70px', borderRadius: '12px', objectFit: 'cover' }}
+                className={styles.galleryImage}
               />
             ))}
           </div>
