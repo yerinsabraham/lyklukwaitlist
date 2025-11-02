@@ -146,6 +146,19 @@ section { padding: 64px 0; }
   grid-template-rows: 1fr 1fr;
   gap: clamp(1rem, 2.5vw, 1.4rem);
 }
+/* When right column has 3 items, tighten spacing and reduce typography so they fit neatly */
+.features-col--right {
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: clamp(0.6rem, 1.2vw, 0.9rem);
+}
+.features-col--right .feature-title {
+  font-size: 1rem;
+}
+.features-col--right .feature-desc {
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+.features-col .feature-card { padding: clamp(0.8rem, 1.6vw, 1rem); }
 .features-image { display: flex; align-items: center; justify-content: center; }
 .features-image img {
   width: 100%;
