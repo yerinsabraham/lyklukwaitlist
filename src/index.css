@@ -43,7 +43,8 @@ h1, h2, h3, .title, .kicker, .section-title, .features-heading {
 body {
   margin: 0;
   min-width: 320px;
-  background: url('/assets/images/background1.png') center/cover no-repeat fixed;
+  /* cache-bust background image to ensure updated file is fetched after edits */
+  background: url('/assets/images/background1.png?v=20251102') center/cover no-repeat fixed;
   color: var(--color-charcoal);
 }
 
