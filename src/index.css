@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
+/* Bricolage Grotesque for section titles (loaded from public assets) */
+@font-face {
+  font-family: 'BricolageGrotesque';
+  src: url('/assets/fonts/BricolageGrotesque-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Brand color tokens */
   --color-primary: #6A0DAD; /* Grape */
@@ -22,6 +31,12 @@
 
 html, body, #root {
   height: 100%;
+}
+
+/* Apply Bricolage Grotesque to all main headings (section titles) */
+h1, h2, h3 {
+  font-family: 'BricolageGrotesque', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  font-weight: 700;
 }
 
 body {
@@ -81,7 +96,7 @@ section { padding: 64px 0; }
    font-weight: 600;
   color: var(--color-charcoal);
   margin: 0 0 2rem;
-  font-family: 'Inter', sans-serif;
+  font-family: 'BricolageGrotesque', 'Inter', sans-serif;
 }
 
 /* Features Grid Section - full-width white background */
@@ -97,6 +112,7 @@ section { padding: 64px 0; }
   font-size: clamp(1.6rem, 4vw, 2.2rem);
   margin: 0 0 2rem;
   letter-spacing: -0.01em;
+  font-family: 'BricolageGrotesque', 'Inter', sans-serif;
 }
 .features-grid {
   display: grid;
@@ -187,6 +203,7 @@ section { padding: 64px 0; }
   color: #000;
   margin: 0;
   letter-spacing: -0.01em;
+  font-family: 'BricolageGrotesque', 'Inter', sans-serif;
 }
 .reach-shoppers-desc {
   font-size: clamp(1rem, 2vw, 1.1rem);
@@ -264,6 +281,7 @@ section { padding: 64px 0; }
   color: #fff;
   margin: 0;
   letter-spacing: -0.01em;
+  font-family: 'BricolageGrotesque', 'Inter', sans-serif;
 }
 .podcast-desc {
   font-size: clamp(1rem, 2vw, 1.1rem);
@@ -338,6 +356,7 @@ section { padding: 64px 0; }
   color: #000;
   margin: 0;
   letter-spacing: -0.01em;
+  font-family: 'BricolageGrotesque', 'Inter', sans-serif;
 }
 .get-featured-desc {
   font-size: clamp(1rem, 2vw, 1.1rem);
