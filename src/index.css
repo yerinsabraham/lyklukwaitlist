@@ -209,6 +209,12 @@ section { padding: 64px 0; }
 .card-deeppurple .feature-icon { background: rgba(255,255,255,0.18); color: #fff; }
 .card-deeppurple .feature-desc { color: #F3F3F3; }
 
+/* Creators Ad Suite distinct styling */
+.card-adsuite { background: linear-gradient(90deg, #E6FFFA 0%, #CFF8F0 100%); }
+.card-adsuite .feature-icon { background: rgba(0,139,122,0.12); color: #006b5a; }
+.card-adsuite .feature-title { color: #006b5a; }
+.card-adsuite .feature-desc { color: #084c44; }
+
 /* Responsive for features section */
 @media (max-width: 1024px) {
   .features-grid { grid-template-columns: 1fr 0.9fr 1fr; }

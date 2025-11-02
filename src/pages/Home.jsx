@@ -187,7 +187,7 @@ export default function Home() {
                 <p className="feature-desc">Send and receive money instantly between users — fast, secure, and built for creators and communities.</p>
               </div>
 
-              <div className="feature-card card-deeppurple">
+              <div className="feature-card card-adsuite">
                 <div className="feature-icon" aria-hidden="true">
                   {/* Edit / pencil icon for Creators Ad Suite */}
                   <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
