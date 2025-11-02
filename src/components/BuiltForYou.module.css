@@ -93,7 +93,12 @@
 }
 
 /* Optional orbit animation for decorative images */
-.orbit .decor { top: 50%; left: 50%; }
+.orbit .decor { 
+  top: 50%; 
+  left: 50%; 
+  margin-top: calc(var(--decor-size, 80px) / -2);
+  margin-left: calc(var(--decor-size, 80px) / -2);
+}
 
 @keyframes orbit360 {
   from { transform: rotate(0deg) translateX(var(--orbit-r, 160px)) rotate(0deg); }
@@ -101,13 +106,13 @@
 }
 
 /* Assign a single orbit radius/duration and staggered start offsets to keep separation */
-.orbit .d1 { --orbit-r: 170px; animation: orbit360 48s linear infinite; animation-delay: 0s;            width: 88px; height: 88px; }
-.orbit .d2 { --orbit-r: 170px; animation: orbit360 48s linear infinite; animation-delay: -6.86s;      width: 76px; height: 76px; }
-.orbit .d3 { --orbit-r: 170px; animation: orbit360 48s linear infinite; animation-delay: -13.72s;     width: 92px; height: 92px; }
-.orbit .d4 { --orbit-r: 170px; animation: orbit360 48s linear infinite; animation-delay: -20.57s;     width: 84px; height: 84px; }
-.orbit .d5 { --orbit-r: 170px; animation: orbit360 48s linear infinite; animation-delay: -27.43s;     width: 78px; height: 78px; }
-.orbit .d6 { --orbit-r: 170px; animation: orbit360 48s linear infinite; animation-delay: -34.29s;     width: 86px; height: 86px; }
-.orbit .d7 { --orbit-r: 170px; animation: orbit360 48s linear infinite; animation-delay: -41.14s;     width: 72px; height: 72px; }
+.orbit .d1 { --orbit-r: 170px; --decor-size: 88px; animation: orbit360 48s linear infinite; animation-delay: 0s;            width: 88px; height: 88px; }
+.orbit .d2 { --orbit-r: 170px; --decor-size: 76px; animation: orbit360 48s linear infinite; animation-delay: -6.86s;      width: 76px; height: 76px; }
+.orbit .d3 { --orbit-r: 170px; --decor-size: 92px; animation: orbit360 48s linear infinite; animation-delay: -13.72s;     width: 92px; height: 92px; }
+.orbit .d4 { --orbit-r: 170px; --decor-size: 84px; animation: orbit360 48s linear infinite; animation-delay: -20.57s;     width: 84px; height: 84px; }
+.orbit .d5 { --orbit-r: 170px; --decor-size: 78px; animation: orbit360 48s linear infinite; animation-delay: -27.43s;     width: 78px; height: 78px; }
+.orbit .d6 { --orbit-r: 170px; --decor-size: 86px; animation: orbit360 48s linear infinite; animation-delay: -34.29s;     width: 86px; height: 86px; }
+.orbit .d7 { --orbit-r: 170px; --decor-size: 72px; animation: orbit360 48s linear infinite; animation-delay: -41.14s;     width: 72px; height: 72px; }
 
 /* Adjust orbit radius on mobile for smaller collage */
 @media (max-width: 968px) {
