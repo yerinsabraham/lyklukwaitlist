@@ -96,7 +96,7 @@ export default function Home() {
           </div>
 
           <div className="hero-image">
-            <img src="/assets/images/image1.png" alt="App preview on phone" />
+            <img src="/assets/images/image1.png" alt="App preview on phone" loading="eager" fetchpriority="high" />
           </div>
         </div>
       </section>
