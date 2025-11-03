@@ -1,10 +1,7 @@
-// Firebase Admin SDK for Vercel Serverless Functions
-import { initializeApp, getApps, cert } from 'firebase-admin/app';
-import { getFirestore } from 'firebase-admin/firestore';
+﻿const { initializeApp, getApps, cert } = require('firebase-admin/app');
+const { getFirestore } = require('firebase-admin/firestore');
 
-// Initialize Firebase Admin if not already initialized
 if (!getApps().length) {
-  // For Vercel deployment, use environment variables
   const privateKey = process.env.FIREBASE_PRIVATE_KEY
     ? process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/g, '\n')
     : undefined;
@@ -18,4 +15,5 @@ if (!getApps().length) {
   });
 }
 
-export const adminDb = getFirestore('lykluk-waitlist');
+const adminDb = getFirestore('lykluk-waitlist');
+module.exports = { adminDb };
