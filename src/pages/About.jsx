@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './About.module.css'
+import { useWaitlist } from '../contexts/WaitlistContext'
 
 export default function About() {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState('idle')
   const [message, setMessage] = useState('')
+  const { open: openWaitlist } = useWaitlist()
 
   async function handleSubmit(e) {
     e.preventDefault()
@@ -24,6 +26,7 @@ export default function About() {
       setStatus('success')
       setMessage('Thanks! You\'re on the list.')
       setEmail('')
+      openWaitlist()
     } catch (err) {
       setStatus('error')
       setMessage(err.message || 'Something went wrong')

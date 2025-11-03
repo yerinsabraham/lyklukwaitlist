@@ -1,0 +1,53 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+  padding: 24px;
+}
+.modal {
+  width: 100%;
+  max-width: 520px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.2);
+  overflow: hidden;
+  transform-origin: center;
+  animation: fadeInScale .18s ease;
+}
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.brand { display:flex; align-items:center; gap:10px }
+.brand img { width:28px; height:28px }
+.closeBtn {
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+}
+.body { padding: 20px 22px 28px }
+.title { margin: 0 0 6px; font-size: 20px }
+.subtitle { margin: 0 0 12px; color:#444 }
+.emojiRow { display:flex; gap:8px; font-size:18px; margin-bottom:12px }
+.form { display:flex; gap:10px; margin-bottom:12px }
+.form input { flex:1; padding:10px 12px; border-radius:10px; border:1px solid #e6e6e6 }
+.submit { padding:10px 14px; border-radius:10px; background:#111827; color:#fff; border: none; cursor: pointer }
+.submit[disabled] { opacity: .65; cursor: default }
+.message { margin:8px 0; font-size:14px }
+.message.success { color: #059669 }
+.message.error { color: #dc2626 }
+.small { margin-top: 8px; color:#666; font-size:13px }
+.visuallyHidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0 }

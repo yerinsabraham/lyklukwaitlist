@@ -8,25 +8,28 @@ export default function Home() {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState('idle') // idle | loading | success | error
   const [message, setMessage] = useState('')
+  const { open: openWaitlist } = useWaitlist()
 
   async function handleSubmit(e){
-    e.preventDefault()
-    setStatus('loading'); setMessage('')
-    try {
-      const res = await fetch('/api/waitlist', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
-      })
-      if (!res.ok) {
-        const data = await res.json().catch(()=>({}))
-        throw new Error(data?.error || 'Failed to join waitlist')
+      e.preventDefault()
+      setStatus('loading'); setMessage('')
+      try {
+        const res = await fetch('/api/waitlist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        })
+        if (!res.ok) {
+          const data = await res.json().catch(()=>({}))
+          throw new Error(data?.error || 'Failed to join waitlist')
+        }
+        setStatus('success'); setMessage('Thanks! You\'re on the list.')
+        setEmail('')
+        // show confirmation modal after success
+        openWaitlist()
+      } catch (err) {
+        setStatus('error'); setMessage(err.message || 'Something went wrong')
       }
-      setStatus('success'); setMessage('Thanks! You\'re on the list.')
-      setEmail('')
-    } catch (err) {
-      setStatus('error'); setMessage(err.message || 'Something went wrong')
-    }
   }
 
   // Scroll to hero and focus the email input (smooth) — used by CTAs across the page

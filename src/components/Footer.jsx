@@ -1,19 +1,22 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Footer.module.css';
+import { useWaitlist } from '../contexts/WaitlistContext'
 
 export default function Footer(){
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle');
+  const { open: openWaitlist } = useWaitlist()
 
   async function handleJoin(e){
     e.preventDefault();
     if(!email) return;
-    setStatus('loading');
+    setStatus('loading')
     try{
       const res = await fetch('/api/waitlist', { method: 'POST', headers: { 'Content-Type':'application/json'}, body: JSON.stringify({email}) });
       if(!res.ok) throw new Error('fail');
       setStatus('success'); setEmail('');
+      openWaitlist()
     }catch(err){ setStatus('error'); }
   }
 
