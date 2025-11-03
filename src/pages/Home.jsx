@@ -3,6 +3,7 @@ import BuiltForYou from '../components/BuiltForYou'
 import StayConnected from '../components/StayConnected'
 import WhereCulture from '../components/WhereCulture'
 import './Home.css'
+import { useWaitlist } from '../contexts/WaitlistContext'
 
 export default function Home() {
   const [email, setEmail] = useState('')
