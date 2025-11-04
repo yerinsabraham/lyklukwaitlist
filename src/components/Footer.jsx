@@ -56,9 +56,6 @@ export default function Footer(){
               </svg>
             </a>
 
-            {/* LinkedIn (kept) */}
-            <a href="#" aria-label="LinkedIn"> <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.07c.67-1.27 2.3-2.6 4.74-2.6 5.07 0 6 3.33 6 7.66V24h-5v-7.2c0-1.72-.03-3.95-2.4-3.95-2.4 0-2.76 1.87-2.76 3.8V24h-5V8z"/></svg></a>
-
             {/* X (formerly Twitter) */}
             <a href="https://x.com/lyklukdigital?s=21" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer"> 
               <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
