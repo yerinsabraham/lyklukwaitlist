@@ -50,7 +50,7 @@ export default function Footer(){
 
           <div className={styles.socials}>
             {/* Instagram */}
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/lyklukdigital/profilecard/?igsh=MWt1YTVzcHR5bGpnMA==" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
               <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M7 2h10a5 5 0 015 5v10a5 5 0 01-5 5H7a5 5 0 01-5-5V7a5 5 0 015-5zm5 6.5A3.5 3.5 0 1015.5 12 3.5 3.5 0 0012 8.5zM18.5 6a1 1 0 11-1 1 1 1 0 011-1z" />
               </svg>
@@ -60,10 +60,15 @@ export default function Footer(){
             <a href="#" aria-label="LinkedIn"> <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v16H0V8zm7.5 0h4.8v2.2h.07c.67-1.27 2.3-2.6 4.74-2.6 5.07 0 6 3.33 6 7.66V24h-5v-7.2c0-1.72-.03-3.95-2.4-3.95-2.4 0-2.76 1.87-2.76 3.8V24h-5V8z"/></svg></a>
 
             {/* X (formerly Twitter) */}
-            <a href="#" aria-label="X"> 
+            <a href="https://x.com/lyklukdigital?s=21" aria-label="X (Twitter)" target="_blank" rel="noopener noreferrer"> 
               <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M18.3 5.71a1 1 0 10-1.41-1.41L12 9.17 7.11 4.29A1 1 0 105.7 5.7L10.59 10.6 5.7 15.49a1 1 0 101.41 1.41L12 12.99l4.89 4.91a1 1 0 001.41-1.41L13.41 11.6 18.3 6.71z" />
               </svg>
+            </a>
+
+            {/* Facebook */}
+            <a href="https://www.facebook.com/share/1BXnKnac4W/?mibextid=wwXIfr" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" xmlns="http://www.w3.org/2000/svg"><path d="M22 12a10 10 0 10-11.5 9.9v-7h-2.2V12h2.2V9.6c0-2.2 1.3-3.4 3.3-3.4.95 0 1.95.17 1.95.17v2.1h-1.07c-1.06 0-1.39.66-1.39 1.34V12h2.36l-.38 2.9h-1.98v7A10 10 0 0022 12z"/></svg>
             </a>
 
             {/* Email (envelope) */}
