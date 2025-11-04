@@ -1,24 +1,27 @@
 import React, { useState } from 'react';
 import styles from './WhereCulture.module.css';
+import { useWaitlist } from '../contexts/WaitlistContext'
 
 export default function WhereCulture() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState('idle');
+  const { open: openWaitlist } = useWaitlist()
 
   async function handleJoin(e){
     e.preventDefault();
     if(!email) return;
-    setStatus('loading');
+    setStatus('loading')
     try{
       const res = await fetch('/api/waitlist', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email })
       });
-      if(!res.ok) throw new Error('Failed');
-      setStatus('success'); setEmail('');
+      if(!res.ok) throw new Error('Failed')
+      setStatus('success'); setEmail('')
+      openWaitlist()
     }catch(err){
-      setStatus('error');
+      setStatus('error')
     }
   }
 

@@ -3,30 +3,34 @@ import BuiltForYou from '../components/BuiltForYou'
 import StayConnected from '../components/StayConnected'
 import WhereCulture from '../components/WhereCulture'
 import './Home.css'
+import { useWaitlist } from '../contexts/WaitlistContext'
 
 export default function Home() {
   const [email, setEmail] = useState('')
   const [status, setStatus] = useState('idle') // idle | loading | success | error
   const [message, setMessage] = useState('')
+  const { open: openWaitlist } = useWaitlist()
 
   async function handleSubmit(e){
-    e.preventDefault()
-    setStatus('loading'); setMessage('')
-    try {
-      const res = await fetch('/api/waitlist', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email })
-      })
-      if (!res.ok) {
-        const data = await res.json().catch(()=>({}))
-        throw new Error(data?.error || 'Failed to join waitlist')
+      e.preventDefault()
+      setStatus('loading'); setMessage('')
+      try {
+        const res = await fetch('/api/waitlist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email })
+        })
+        if (!res.ok) {
+          const data = await res.json().catch(()=>({}))
+          throw new Error(data?.error || 'Failed to join waitlist')
+        }
+        setStatus('success'); setMessage('Thanks! You\'re on the list.')
+        setEmail('')
+        // show confirmation modal after success
+        openWaitlist()
+      } catch (err) {
+        setStatus('error'); setMessage(err.message || 'Something went wrong')
       }
-      setStatus('success'); setMessage('Thanks! You\'re on the list.')
-      setEmail('')
-    } catch (err) {
-      setStatus('error'); setMessage(err.message || 'Something went wrong')
-    }
   }
 
   // Scroll to hero and focus the email input (smooth) — used by CTAs across the page
@@ -92,7 +96,7 @@ export default function Home() {
           </div>
 
           <div className="hero-image">
-            <img src="/assets/images/image1.png" alt="App preview on phone" />
+            <img src="/assets/images/image1.png" alt="App preview on phone" loading="eager" fetchpriority="high" />
           </div>
         </div>
       </section>
@@ -161,8 +165,8 @@ export default function Home() {
               <img src="/assets/images/3bgimage.png" alt="App features preview" />
             </div>
 
-            {/* Right column (2 cards) */}
-            <div className="features-col">
+            {/* Right column (3 cards) */}
+            <div className="features-col features-col--right">
               <div className="feature-card card-orange">
                 <div className="feature-icon" aria-hidden="true">
                   {/* Camera icon */}
@@ -177,16 +181,26 @@ export default function Home() {
 
               <div className="feature-card card-deeppurple">
                 <div className="feature-icon" aria-hidden="true">
-                  {/* Microphone icon */}
+                  {/* Wallet icon */}
                   <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <rect x="9" y="2" width="6" height="11" rx="3" />
-                    <path d="M12 13v7" />
-                    <path d="M8 20h8" />
-                    <path d="M5 10a7 7 0 0 0 14 0" />
+                    <path d="M2 7h18v10H2z" />
+                    <path d="M16 12a2 2 0 100-4 2 2 0 000 4z" />
                   </svg>
                 </div>
-                <h3 className="feature-title">Start your podcast</h3>
-                <p className="feature-desc">Launch a podcast right here. Your audience is already shopping, now they’re listening too.</p>
+                <h3 className="feature-title">P2P Wallet System</h3>
+                <p className="feature-desc">Send and receive money instantly between users — fast, secure, and built for creators and communities.</p>
+              </div>
+
+              <div className="feature-card card-adsuite">
+                <div className="feature-icon" aria-hidden="true">
+                  {/* Edit / pencil icon for Creators Ad Suite */}
+                  <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 20h9" />
+                    <path d="M16.5 3.5a2.121 2.121 0 113 3L7 19l-4 1 1-4L16.5 3.5z" />
+                  </svg>
+                </div>
+                <h3 className="feature-title">Creators Ad Suite</h3>
+                <p className="feature-desc">Promote your content and products with powerful in-app ad tools designed to help creators grow their reach and revenue.</p>
               </div>
             </div>
           </div>

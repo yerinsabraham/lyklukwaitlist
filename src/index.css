@@ -43,7 +43,9 @@ h1, h2, h3, .title, .kicker, .section-title, .features-heading {
 body {
   margin: 0;
   min-width: 320px;
-  /* cache-bust background image to ensure updated file is fetched after edits */
+  /* Start with neutral background color to prevent flash during image load */
+  background-color: #0a0a0f;
+  /* Load background image progressively */
   background: url('/assets/images/background1.png?v=20251102') center/cover no-repeat fixed;
   color: var(--color-charcoal);
 }
@@ -146,6 +148,23 @@ section { padding: 64px 0; }
   grid-template-rows: 1fr 1fr;
   gap: clamp(1rem, 2.5vw, 1.4rem);
 }
+/* When right column has 3 items, tighten spacing and reduce typography so they fit neatly */
+.features-col--right {
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: clamp(0.6rem, 1.2vw, 0.9rem);
+}
+.features-col--right .feature-title {
+  font-size: 1rem;
+}
+.features-col--right .feature-desc {
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+.features-col .feature-card { padding: clamp(0.8rem, 1.6vw, 1rem); }
+
+/* stronger override for right-column cards: more specific and placed after defaults */
+.features-col--right .feature-card .feature-title { font-size: 1rem !important; line-height: 1.25; }
+.features-col--right .feature-card .feature-desc { font-size: 0.92rem !important; line-height: 1.35; }
 .features-image { display: flex; align-items: center; justify-content: center; }
 .features-image img {
   width: 100%;
@@ -191,6 +210,12 @@ section { padding: 64px 0; }
 .card-deeppurple { background: #A855F7; color: #fff; }
 .card-deeppurple .feature-icon { background: rgba(255,255,255,0.18); color: #fff; }
 .card-deeppurple .feature-desc { color: #F3F3F3; }
+
+/* Creators Ad Suite distinct styling */
+.card-adsuite { background: linear-gradient(90deg, #E6FFFA 0%, #CFF8F0 100%); }
+.card-adsuite .feature-icon { background: rgba(0,139,122,0.12); color: #006b5a; }
+.card-adsuite .feature-title { color: #006b5a; }
+.card-adsuite .feature-desc { color: #084c44; }
 
 /* Responsive for features section */
 @media (max-width: 1024px) {
