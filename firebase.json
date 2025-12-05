@@ -13,6 +13,20 @@
     "predeploy": [
       "npm run build"
     ],
+    "headers": [
+      {
+        "source": "/.well-known/apple-app-site-association",
+        "headers": [
+          { "key": "Content-Type", "value": "application/json" }
+        ]
+      },
+      {
+        "source": "/.well-known/assetlinks.json",
+        "headers": [
+          { "key": "Content-Type", "value": "application/json" }
+        ]
+      }
+    ],
     "rewrites": [
       { "source": "/api/waitlist", "function": "waitlist" },
       { "source": "**", "destination": "/index.html" }
