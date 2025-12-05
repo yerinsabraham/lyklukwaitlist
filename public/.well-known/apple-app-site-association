@@ -3,11 +3,12 @@
     "apps": [],
     "details": [
       {
-        "appID": "ULA8TX38WF.com.lykluk.app",
-        "paths": [
-          "/u/*",
-          "/watch/*"
-        ]
+        "appID": "ULA8TX38WF.com.lykluk.lykluk",
+        "paths": ["/u/*", "/watch/*"]
+      },
+      {
+        "appID": "ULA8TX38WF.com.lykluk.lyklukDev",
+        "paths": ["/u/*", "/watch/*"]
       }
     ]
   }
