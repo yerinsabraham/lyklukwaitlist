@@ -34,7 +34,7 @@ export default function UserProfile() {
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.logoSection}>
-          <img src="/assets/images/logo.png" alt="Lykluk" className={styles.logo} />
+          <img src="/assets/icons/app logo.png" alt="Lykluk" className={styles.logo} />
           <h1 className={styles.title}>{displayUsername}</h1>
         </div>
 

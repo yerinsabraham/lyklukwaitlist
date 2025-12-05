@@ -31,7 +31,7 @@ export default function WatchVideo() {
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.logoSection}>
-          <img src="/assets/images/logo.png" alt="Lykluk" className={styles.logo} />
+          <img src="/assets/icons/app logo.png" alt="Lykluk" className={styles.logo} />
           <h1 className={styles.title}>Watch on Lykluk</h1>
         </div>
 
