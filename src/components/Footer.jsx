@@ -38,6 +38,7 @@ export default function Footer(){
               <h4>Company</h4>
               <Link to="/about">About us</Link>
               <Link to="/faq">FAQ</Link>
+              <a href="/assets/LykCoin-Whitepaper.pdf" target="_blank" rel="noopener noreferrer">WhitePaper</a>
             </div>
           </div>
         </div>
