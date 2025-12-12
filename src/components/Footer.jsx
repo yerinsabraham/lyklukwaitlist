@@ -32,7 +32,7 @@ export default function Footer(){
             <div>
               <h4>Legal</h4>
               <Link to="/privacy">Privacy policy</Link>
-              <a href="#">Terms of use</a>
+              <Link to="/terms">Terms of use</Link>
             </div>
             <div>
               <h4>Company</h4>
