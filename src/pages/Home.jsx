@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import BuiltForYou from '../components/BuiltForYou'
 import StayConnected from '../components/StayConnected'
 import WhereCulture from '../components/WhereCulture'
@@ -11,19 +11,49 @@ export default function Home() {
   const [message, setMessage] = useState('')
   const { open: openWaitlist } = useWaitlist()
 
+
+
   async function handleSubmit(e){
       e.preventDefault()
       setStatus('loading'); setMessage('')
+      const emailValue = email
       try {
+        // Submit to Firebase first
         const res = await fetch('/api/waitlist', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ email })
+          body: JSON.stringify({ email: emailValue })
         })
         if (!res.ok) {
           const data = await res.json().catch(()=>({}))
           throw new Error(data?.error || 'Failed to join waitlist')
         }
+        
+        // Submit to MailerLite directly using POST request
+        try {
+          // Create FormData to submit to MailerLite
+          const mlFormData = new URLSearchParams()
+          mlFormData.append('fields[email]', emailValue)
+          mlFormData.append('ml-submit', '1')
+          
+          // Submit via fetch with redirect handling
+          fetch('https://assets.mailerlite.com/jsonp/1884471/forms/172950727577044207/subscribe', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: mlFormData.toString(),
+            mode: 'no-cors',
+            credentials: 'omit'
+          }).then(() => {
+            console.log('✅ Email subscribed to MailerLite:', emailValue)
+          }).catch(err => {
+            console.warn('MailerLite warning (may still work):', err.message)
+          })
+        } catch (mlError) {
+          console.warn('MailerLite error:', mlError)
+        }
+        
         setStatus('success'); setMessage('Thanks! You\'re on the list.')
         setEmail('')
         // show confirmation modal after success
@@ -96,7 +126,7 @@ export default function Home() {
           </div>
 
           <div className="hero-image">
-            <img src="/assets/images/image1.png" alt="App preview on phone" loading="eager" fetchpriority="high" />
+            <img src="/assets/images/image1.png" alt="App preview on phone" loading="eager" fetchPriority="high" />
           </div>
         </div>
       </section>
@@ -112,6 +142,11 @@ export default function Home() {
             <img src="/assets/images/partners/gtbank.png" alt="GTBank" />
             <img src="/assets/images/partners/metpay.png" alt="MetPay" />
             <img src="/assets/images/partners/paystack.png" alt="Paystack" />
+          {/* Hidden MailerLite embedded form - DO NOT REMOVE */}
+          <div className="ml-embedded-hidden" style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', overflow: 'hidden' }}>
+            <div className="ml-embedded" data-form="172950727577044207"></div>
+          </div>
+
             <img src="/assets/images/partners/startbutton.png" alt="Start Button" />
             <img src="/assets/images/partners/sterling.png" alt="Sterling Bank" />
             {/* Duplicate for seamless loop */}
