@@ -14,7 +14,13 @@
       ],
       "headers": [
         {
-          "source": "**/*.@(html|js|css|json)",
+          "source": "/**",
+          "headers": [
+            { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+          ]
+        },
+        {
+          "source": "/",
           "headers": [
             { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
           ]
