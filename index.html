@@ -3,19 +3,47 @@
   <head>
     <meta charset="UTF-8" />
     <!-- Primary favicons -->
-    <link rel="icon" type="image/png" href="/assets/icons/app%20logo.png" />
-    <link rel="shortcut icon" href="/assets/icons/app%20logo.png" />
-    <link rel="apple-touch-icon" href="/assets/icons/app%20logo.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/app%20logo.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/app%20logo.png" />
+  <link rel="shortcut icon" href="/assets/icons/app%20logo.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/app%20logo.png" />
+  <!-- If you later generate dedicated favicon files (favicon.ico, 32x32, 16x16, apple-touch-icon), replace the hrefs above with the specific files for best results. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lykluk — Launching soon</title>
+  <title>Lykluk — Short-Form Video, Social Commerce & Live Streaming</title>
   <meta name="theme-color" content="#6A0DAD" />
   <!-- Older browsers/fallbacks: keep previous links above; do not duplicate. -->
   
+  <!-- Google Fonts (preconnect + load in head for mobile) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
   <!-- Preload critical images for faster initial render -->
   <link rel="preload" as="image" href="/assets/images/background1.png?v=20251102" />
   <link rel="preload" as="image" href="/assets/images/image1.png" />
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZPV2SXV23E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZPV2SXV23E');
+  </script>
+  
+  <!-- MailerLite Universal -->
+  <script>
+    (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '1884471');
+  </script>
+  <!-- End MailerLite Universal -->
   </head>
-  <body>
+  <body style="margin:0">
+    <noscript><p style="color:#333;text-align:center;padding:4rem 1rem;font-family:sans-serif;background:rgba(255,255,255,0.9)">Please enable JavaScript to use LykLuk.</p></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

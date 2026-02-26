@@ -1,0 +1,38 @@
+/* Google Fonts loaded via <link> in index.html for better mobile performance */
+
+@font-face {
+  font-family: 'BricolageGrotesque';
+  src: url('/assets/fonts/BricolageGrotesque-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-primary: #6A0DAD;
+  --color-secondary: #FFD700;
+  --color-orange: #FF5709;
+  --color-charcoal: #333333;
+
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body, #root { height: 100%; margin: 0; }
+
+body {
+  background: #0b0b14;
+  color: #e8e8f0;
+  margin: 0;
+}
+
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3 {
+  font-family: 'BricolageGrotesque', 'Inter', sans-serif;
+  font-weight: 700;
+}

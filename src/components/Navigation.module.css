@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 1.75rem;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   background: rgba(255, 255, 255, 0.8);
   border-radius: 100px;
@@ -125,7 +126,7 @@
 /* Mobile menu overlay and dropdown */
 .mobileMenuOverlay {
   position: fixed;
-  inset: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   background: rgba(0, 0, 0, 0.3);
   z-index: 1190;
   transition: opacity 200ms ease;
@@ -142,6 +143,7 @@
   top: calc(100% + 10px);
   right: 0;
   background: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   border-radius: 12px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);

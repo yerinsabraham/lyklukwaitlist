@@ -1,0 +1,13 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.lykluk.lykluk",
+      "sha256_cert_fingerprints": [
+        "AD:83:B0:EA:6F:40:AF:A2:86:85:AD:2F:24:79:5D:D9:4F:CB:1D:8B:91:5D:11:E0:48:C7:90:3F:B6:A3:69:1F",
+        "0B:D1:04:2C:E3:6B:E5:E3:68:D5:B1:BB:7A:2C:CF:3A:1B:CD:C6:00:B1:B4:3D:62:F3:DF:9B:C0:53:14:1F:E7"
+      ]
+    }
+  }
+]

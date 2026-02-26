@@ -63,6 +63,7 @@ export default function Navigation() {
       <div className={styles.navLinks}>
         <Link to="/about">About</Link>
         <Link to="/faq">FAQ</Link>
+        <a href="https://blog.lykluk.com" target="_blank" rel="noopener noreferrer">Blog</a>
       </div>
 
       <button
@@ -107,6 +108,16 @@ export default function Navigation() {
             >
               FAQ
             </Link>
+            <a
+              href="https://blog.lykluk.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                closeMenu()
+              }}
+            >
+              Blog
+            </a>
             <button
               className={styles.dropdownCta}
               onClick={() => {

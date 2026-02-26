@@ -115,3 +115,26 @@ npm run build; firebase deploy --only hosting
 ----
 
 If you'd like, I can also add a small CONTRIBUTING.md with branching rules and a checklist for PRs.
+
+## Recent changes (auto-recorded)
+
+- Branch: `lykluk-updates` (pushed to origin)
+- Live site deployed: https://lykluk-467006.web.app (Firebase Hosting)
+- Key edits in this branch: added favicon references, wired social links in the footer (Instagram, X/Twitter, Facebook), removed LinkedIn icon, added this `README_UPDATES.md`, and updated hero/background image.
+
+## Quick reminders for collaborators
+
+- If you update large images, compress them first (target <500 KB for hero/background images). Use Squoosh, TinyPNG, or `sharp`.
+- To create a PR from this branch into `main` (on upstream):
+
+  1. Create PR in browser: https://github.com/Lykluk-main/lyklukwaitlist/compare/main...Lykluk-main:lykluk-updates?expand=1
+  2. Suggested PR title: `chore: add favicon, wire social links, add README_UPDATES guide`
+
+## How I verified
+
+- I built the project locally (`npm run build`) and ran `firebase deploy --only hosting` to push the latest production build.
+- The deploy completed successfully and the hosting URL above shows the latest changes.
+
+----
+
+If you want, I can also add a small `scripts/` helper to auto-generate optimized favicon files and compressed image variants (WebP + PNG) using `sharp`. This requires adding `sharp` as a devDependency and running `npm i`.

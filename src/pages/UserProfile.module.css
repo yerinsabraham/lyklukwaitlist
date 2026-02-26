@@ -1,0 +1,148 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.content {
+  max-width: 600px;
+  width: 100%;
+  background: white;
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.logoSection {
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.profileInfo {
+  margin: 2rem 0;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  border-radius: 16px;
+}
+
+.profilePlaceholder {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #667eea;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: #4a5568;
+  margin: 0;
+}
+
+.downloadSection {
+  margin: 2rem 0;
+}
+
+.downloadTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+}
+
+.downloadText {
+  font-size: 1rem;
+  color: #718096;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.storeButton {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.storeButton:hover {
+  background: #333;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.storeButton svg {
+  width: 24px;
+  height: 24px;
+}
+
+.backButton {
+  margin-top: 2rem;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  color: #667eea;
+  border: 2px solid #667eea;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.backButton:hover {
+  background: #667eea;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 2rem 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .buttonGroup {
+    flex-direction: column;
+  }
+
+  .storeButton {
+    width: 100%;
+    justify-content: center;
+  }
+}

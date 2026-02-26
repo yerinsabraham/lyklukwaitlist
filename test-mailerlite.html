@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MailerLite Test</title>
+    
+    <!-- MailerLite Universal -->
+    <script>
+        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+        ml('account', '1884471');
+    </script>
+    <!-- End MailerLite Universal -->
+</head>
+<body>
+    <h1>MailerLite Integration Test</h1>
+    <p>This is a test to verify your MailerLite form works correctly.</p>
+    
+    <h2>Direct MailerLite Form:</h2>
+    <div class="ml-embedded" data-form="atgwbc"></div>
+    
+    <hr style="margin: 40px 0;">
+    
+    <h2>Custom Form (Testing API submission):</h2>
+    <form id="testForm" style="margin: 20px 0;">
+        <input type="email" id="testEmail" placeholder="Enter email" required style="padding: 10px; width: 300px;">
+        <button type="submit" style="padding: 10px 20px;">Test Submit</button>
+    </form>
+    <div id="result" style="margin: 20px 0; padding: 10px; background: #f0f0f0;"></div>
+    
+    <script>
+        document.getElementById('testForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const email = document.getElementById('testEmail').value;
+            const resultDiv = document.getElementById('result');
+            
+            resultDiv.innerHTML = 'Submitting...';
+            
+            try {
+                const formData = new FormData();
+                formData.append('fields[email]', email);
+                formData.append('ml-submit', '1');
+                formData.append('anticsrf', 'true');
+                
+                await fetch('https://assets.mailerlite.com/jsonp/1884471/forms/atgwbc/subscribe', {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'no-cors'
+                });
+                
+                resultDiv.innerHTML = '✅ Submitted! Check your MailerLite dashboard.<br>Email: ' + email;
+                resultDiv.style.background = '#d4edda';
+                document.getElementById('testEmail').value = '';
+            } catch (error) {
+                resultDiv.innerHTML = '❌ Error: ' + error.message;
+                resultDiv.style.background = '#f8d7da';
+            }
+        });
+    </script>
+</body>
+</html>

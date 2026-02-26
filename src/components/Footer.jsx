@@ -31,13 +31,15 @@ export default function Footer(){
           <div className={styles.links}>
             <div>
               <h4>Legal</h4>
-              <a href="#">Privacy policy</a>
-              <a href="#">Terms of use</a>
+              <Link to="/privacy">Privacy policy</Link>
+              <Link to="/terms-of-use">Terms of use</Link>
             </div>
             <div>
               <h4>Company</h4>
               <Link to="/about">About us</Link>
               <Link to="/faq">FAQ</Link>
+              <a href="https://blog.lykluk.com" target="_blank" rel="noopener noreferrer">Blog</a>
+              <a href="/assets/LykCoin-Whitepaper.pdf" target="_blank" rel="noopener noreferrer">WhitePaper</a>
             </div>
           </div>
         </div>
