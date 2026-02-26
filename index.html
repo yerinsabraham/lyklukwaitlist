@@ -9,10 +9,15 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/app%20logo.png" />
   <!-- If you later generate dedicated favicon files (favicon.ico, 32x32, 16x16, apple-touch-icon), replace the hrefs above with the specific files for best results. -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lykluk — Launching soon</title>
+  <title>Lykluk — Short-Form Video, Social Commerce & Live Streaming</title>
   <meta name="theme-color" content="#6A0DAD" />
   <!-- Older browsers/fallbacks: keep previous links above; do not duplicate. -->
   
+  <!-- Google Fonts (preconnect + load in head for mobile) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
   <!-- Preload critical images for faster initial render -->
   <link rel="preload" as="image" href="/assets/images/background1.png?v=20251102" />
   <link rel="preload" as="image" href="/assets/images/image1.png" />
@@ -37,7 +42,8 @@
   </script>
   <!-- End MailerLite Universal -->
   </head>
-  <body>
+  <body style="background:#0a0a0f;margin:0">
+    <noscript><p style="color:#fff;text-align:center;padding:4rem 1rem;font-family:sans-serif">Please enable JavaScript to use LykLuk.</p></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

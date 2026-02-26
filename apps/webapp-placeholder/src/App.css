@@ -1,6 +1,7 @@
 .app-shell {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   min-height: 100dvh;
   overflow-x: hidden;
 }
@@ -16,6 +17,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 0.75rem 1.75rem;
+  -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
   background: rgba(20, 20, 30, 0.7);
   border-radius: 100px;
@@ -72,6 +74,8 @@
 @media (max-width: 768px) {
   .nav-links { display: none; }
   .nav { padding: 0.9rem 1.5rem; }
+  .nav-cta { font-size: 0.8rem; padding: 0.5rem 1rem; }
+  .nav-cta svg { display: none; }
 }
 
 /* ─── Hero ─── */
@@ -81,13 +85,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 120px 5% 60px;
+  padding: 140px 5% 60px;
   overflow: hidden;
 }
 
 .hero-bg-pattern {
   position: absolute;
-  inset: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   background-image: 
     radial-gradient(rgba(106, 13, 173, 0.08) 1px, transparent 1px),
     radial-gradient(rgba(106, 13, 173, 0.05) 1px, transparent 1px);
@@ -253,8 +257,12 @@
 }
 
 @media (max-width: 520px) {
-  .store-badges { flex-direction: column; }
+  .store-badges { flex-direction: column; align-items: center; }
+  .store-badge { width: 100%; max-width: 280px; justify-content: center; }
   .qr-section { display: none; }
+  .hero { padding: 130px 1.25rem 40px; }
+  .hero-sub { font-size: 1rem; }
+  .app-icon-large { width: 80px; height: 80px; border-radius: 20px; }
 }
 
 /* ─── Features Section ─── */
@@ -473,7 +481,7 @@
 
 .phone-video-overlay {
   position: absolute;
-  inset: 0;
+  top: 0; right: 0; bottom: 0; left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -482,6 +490,7 @@
   width: 48px;
   height: 48px;
   background: rgba(255,255,255,0.2);
+  -webkit-backdrop-filter: blur(4px);
   backdrop-filter: blur(4px);
   border-radius: 50%;
   display: flex;
@@ -557,7 +566,16 @@
   }
   .phone-text { align-items: center; }
   .phone-text p { max-width: 100%; }
-  .store-badges-small { justify-content: center; }
+  .store-badges-small { justify-content: center; flex-wrap: wrap; }
+}
+@media (max-width: 520px) {
+  .phone-section { padding: 40px 1.25rem 60px; }
+  .phone-frame { width: 240px; height: 480px; border-radius: 32px; }
+  .phone-notch { width: 100px; height: 24px; }
+  .store-badges-small { flex-direction: column; align-items: center; }
+  .store-badge-mini { width: 100%; max-width: 200px; justify-content: center; }
+  .footer-links { gap: 1rem; }
+  .footer-links a { font-size: 0.8rem; }
 }
 
 /* ─── Footer ─── */

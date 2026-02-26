@@ -21,8 +21,8 @@ export default function Header() {
           <a href="https://about.lykluk.com/faq">FAQ</a>
         </nav>
 
-        <a className="header-cta" href="https://about.lykluk.com/#waitlist">
-          Join Waitlist
+        <a className="header-cta" href="https://apps.apple.com/ng/app/lykluk/id6444111490" target="_blank" rel="noopener noreferrer">
+          Download App
         </a>
 
         <button
@@ -45,7 +45,7 @@ export default function Header() {
           <a href="https://about.lykluk.com" onClick={() => setMenuOpen(false)}>About</a>
           <a href="https://lykluk.com" onClick={() => setMenuOpen(false)}>Web App</a>
           <a href="https://about.lykluk.com/faq" onClick={() => setMenuOpen(false)}>FAQ</a>
-          <a className="mobile-cta" href="https://about.lykluk.com/#waitlist" onClick={() => setMenuOpen(false)}>Join Waitlist</a>
+          <a className="mobile-cta" href="https://apps.apple.com/ng/app/lykluk/id6444111490" target="_blank" rel="noopener noreferrer" onClick={() => setMenuOpen(false)}>Download App</a>
         </div>
       )}
     </header>

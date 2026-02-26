@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+/* Google Fonts loaded via <link> in index.html for better mobile performance */
 
 /* Bricolage Grotesque for section titles (loaded from public assets) */
 @font-face {
@@ -324,6 +324,7 @@ section { padding: 64px 0; }
   gap: 0.5rem;
   width: fit-content;
   background: rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   color: #fff;
   font-size: 0.9rem;
@@ -536,6 +537,7 @@ section { padding: 64px 0; }
   gap: 0.65rem;
   width: fit-content;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   color: #333;
   font-size: 0.95rem;
