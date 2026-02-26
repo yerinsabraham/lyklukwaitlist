@@ -1,0 +1,114 @@
+.blog-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0.85rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--color-text);
+}
+.header-brand img {
+  height: 30px;
+  width: auto;
+}
+.header-brand-text {
+  letter-spacing: 0.5px;
+}
+.header-divider {
+  width: 1px;
+  height: 20px;
+  background: var(--color-border);
+  margin: 0 2px;
+}
+.header-blog-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  letter-spacing: 0;
+}
+
+.header-nav {
+  display: flex;
+  gap: 2rem;
+}
+.header-nav a {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  transition: color 0.2s;
+}
+.header-nav a:hover {
+  color: var(--color-primary);
+}
+
+.header-cta {
+  padding: 0.5rem 1.2rem;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: all 0.2s;
+}
+.header-cta:hover {
+  background: #7a1abd;
+  transform: translateY(-1px);
+}
+
+.header-mobile-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text);
+  padding: 0.25rem;
+}
+
+.header-mobile-menu {
+  display: none;
+  flex-direction: column;
+  padding: 0.5rem 1.5rem 1rem;
+  border-top: 1px solid var(--color-border);
+}
+.header-mobile-menu a {
+  display: block;
+  padding: 0.75rem 0;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+.header-mobile-menu a:hover { color: var(--color-primary); }
+.header-mobile-menu .mobile-cta {
+  margin-top: 0.5rem;
+  text-align: center;
+  background: var(--color-primary);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.75rem;
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .header-nav { display: none; }
+  .header-cta { display: none; }
+  .header-mobile-btn { display: block; }
+  .header-mobile-menu { display: flex; }
+}

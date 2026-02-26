@@ -1,0 +1,9 @@
+.blog-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
+.blog-main {
+  flex: 1;
+}
