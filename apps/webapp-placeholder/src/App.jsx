@@ -5,7 +5,7 @@ function App() {
     <div className="app-shell">
       {/* Navigation */}
       <nav className="nav">
-        <a className="brand" href="https://about.lykluk.com" aria-label="LykLuk Home">
+        <a className="brand" href="/" aria-label="LykLuk Home">
           <img src="/assets/icons/app%20logo.png" alt="LykLuk Logo" />
           <span>LYKLUK</span>
         </a>
@@ -14,162 +14,228 @@ function App() {
           <a href="https://about.lykluk.com/faq">FAQ</a>
           <a href="https://blog.lykluk.com">Blog</a>
         </div>
-        <a className="nav-cta" href="https://about.lykluk.com/#waitlist">
-          Join Waitlist
+        <a className="nav-cta" href="https://apps.apple.com/ng/app/lykluk/id6444111490" target="_blank" rel="noopener noreferrer">
+          Download App
           <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
-            <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+            <path d="M10 3a1 1 0 011 1v5.586l2.293-2.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L9 9.586V4a1 1 0 011-1z" />
+            <path d="M3 14a1 1 0 011 1v1h12v-1a1 1 0 112 0v2a1 1 0 01-1 1H3a1 1 0 01-1-1v-2a1 1 0 011-1z" />
           </svg>
         </a>
       </nav>
 
-      {/* Hero: Coming Soon */}
+      {/* Hero: Download the App */}
       <main className="hero">
+        <div className="hero-bg-pattern" />
         <div className="hero-glow" />
+
         <div className="hero-content">
-          <div className="badge">
-            <span className="badge-dot" />
-            <span>Web App in Development</span>
+          <div className="app-icon-large">
+            <img src="/assets/icons/app%20logo.png" alt="LykLuk App Icon" />
           </div>
 
           <h1>
-            The Lykluk<br />
-            <span className="gradient-text">Web Experience</span><br />
-            is coming soon.
+            Get <span className="gradient-text">LykLuk</span>
           </h1>
 
           <p className="hero-sub">
-            Everything you love about the app — your shop, your community, your culture — 
-            is being built for the web. Stay tuned.
+            The short-form video platform where culture meets commerce. Create videos, 
+            go live, shop trending products, and earn rewards — all in one app.
           </p>
 
-          <div className="hero-actions">
-            <a className="btn-primary" href="https://about.lykluk.com">
-              Visit About Page
-              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
-                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
+          {/* Store Badges */}
+          <div className="store-badges">
+            <a
+              className="store-badge"
+              href="https://apps.apple.com/ng/app/lykluk/id6444111490"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Download on the App Store"
+            >
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
               </svg>
+              <div className="store-badge-text">
+                <span className="store-badge-small">Download on the</span>
+                <span className="store-badge-large">App Store</span>
+              </div>
             </a>
-            <a className="btn-secondary" href="https://blog.lykluk.com">
-              Read Our Blog
+            <a
+              className="store-badge"
+              href="https://play.google.com/store/apps/details?id=com.lykluk.lykluk"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Get it on Google Play"
+            >
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
+                <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302-2.533-2.533L17.698 9.508zM5.864 2.658L16.8 8.99l-2.302 2.302-8.635-8.635z" />
+              </svg>
+              <div className="store-badge-text">
+                <span className="store-badge-small">Get it on</span>
+                <span className="store-badge-large">Google Play</span>
+              </div>
             </a>
           </div>
-        </div>
 
-        {/* Mock App Shell Preview */}
-        <div className="app-preview">
-          <div className="preview-window">
-            <div className="preview-titlebar">
-              <div className="preview-dots">
-                <span /><span /><span />
-              </div>
-              <span className="preview-url">app.lykluk.com</span>
+          {/* QR Code section for desktop */}
+          <div className="qr-section">
+            <div className="qr-divider">
+              <span className="divider-line" />
+              <span className="divider-text">or scan to download</span>
+              <span className="divider-line" />
             </div>
-            <div className="preview-body">
-              {/* Sidebar mock */}
-              <div className="preview-sidebar">
-                <div className="sidebar-logo">
-                  <img src="/assets/icons/app%20logo.png" alt="" />
-                </div>
-                <div className="sidebar-item active">
-                  <div className="sidebar-icon" />
-                  <div className="sidebar-label" />
-                </div>
-                <div className="sidebar-item">
-                  <div className="sidebar-icon" />
-                  <div className="sidebar-label" />
-                </div>
-                <div className="sidebar-item">
-                  <div className="sidebar-icon" />
-                  <div className="sidebar-label" />
-                </div>
-                <div className="sidebar-item">
-                  <div className="sidebar-icon" />
-                  <div className="sidebar-label" />
-                </div>
-                <div className="sidebar-item">
-                  <div className="sidebar-icon" />
-                  <div className="sidebar-label" />
-                </div>
+            <div className="qr-placeholder">
+              <div className="qr-code">
+                {/* Simple QR-like visual pattern */}
+                <svg viewBox="0 0 100 100" width="120" height="120">
+                  <rect width="100" height="100" rx="12" fill="white"/>
+                  <rect x="8" y="8" width="28" height="28" rx="4" fill="#6A0DAD"/>
+                  <rect x="12" y="12" width="20" height="20" rx="2" fill="white"/>
+                  <rect x="16" y="16" width="12" height="12" rx="1" fill="#6A0DAD"/>
+                  <rect x="64" y="8" width="28" height="28" rx="4" fill="#6A0DAD"/>
+                  <rect x="68" y="12" width="20" height="20" rx="2" fill="white"/>
+                  <rect x="72" y="16" width="12" height="12" rx="1" fill="#6A0DAD"/>
+                  <rect x="8" y="64" width="28" height="28" rx="4" fill="#6A0DAD"/>
+                  <rect x="12" y="68" width="20" height="20" rx="2" fill="white"/>
+                  <rect x="16" y="72" width="12" height="12" rx="1" fill="#6A0DAD"/>
+                  <rect x="40" y="8" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="52" y="8" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="40" y="20" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="40" y="40" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="52" y="40" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="40" y="52" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="52" y="52" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="64" y="40" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="76" y="52" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="84" y="40" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="64" y="64" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="76" y="64" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="84" y="76" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="64" y="84" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="76" y="84" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="84" y="84" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="8" y="40" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="20" y="40" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="8" y="52" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                  <rect x="28" y="52" width="8" height="8" rx="1" fill="#6A0DAD"/>
+                </svg>
               </div>
-
-              {/* Main content mock */}
-              <div className="preview-main">
-                <div className="preview-topbar">
-                  <div className="topbar-search" />
-                  <div className="topbar-avatar" />
-                </div>
-                <div className="preview-cards">
-                  <div className="preview-card shimmer">
-                    <div className="card-img" />
-                    <div className="card-line short" />
-                    <div className="card-line" />
-                  </div>
-                  <div className="preview-card shimmer">
-                    <div className="card-img" />
-                    <div className="card-line short" />
-                    <div className="card-line" />
-                  </div>
-                  <div className="preview-card shimmer">
-                    <div className="card-img" />
-                    <div className="card-line short" />
-                    <div className="card-line" />
-                  </div>
-                </div>
-                <div className="coming-soon-overlay">
-                  <span>Coming Soon</span>
-                </div>
-              </div>
+              <p className="qr-label">Point your phone camera here</p>
             </div>
           </div>
         </div>
       </main>
 
-      {/* Features Preview */}
-      <section className="features-preview">
-        <h2 className="section-heading">What you'll be able to do</h2>
+      {/* Features Section */}
+      <section className="features-section">
+        <h2 className="section-heading">Everything in one app</h2>
         <div className="feature-grid">
           <div className="feature-card">
             <div className="feature-icon purple">
               <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M6 7h12l-1 12a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2L6 7Z" />
-                <path d="M9 7V6a3 3 0 0 1 6 0v1" />
+                <polygon points="23 7 16 12 23 17 23 7" />
+                <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
               </svg>
             </div>
-            <h3>Shop & Sell</h3>
-            <p>Browse authentic African products or list your own. Full marketplace at your fingertips.</p>
-            <span className="feature-status">Coming Soon</span>
+            <h3>Short-Form Video</h3>
+            <p>Record, edit, and share videos with advanced filters, effects, stickers, and music.</p>
           </div>
           <div className="feature-card">
             <div className="feature-icon amber">
               <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z" />
+                <circle cx="12" cy="12" r="10" />
+                <polygon points="10 8 16 12 10 16 10 8" />
               </svg>
             </div>
-            <h3>Connect & Chat</h3>
-            <p>Direct messages, groups, and community spaces — no algorithm drama.</p>
-            <span className="feature-status">Coming Soon</span>
+            <h3>Live Streaming</h3>
+            <p>Go live, interact with fans in real-time, and sell products directly during your streams.</p>
           </div>
           <div className="feature-card">
             <div className="feature-icon orange">
               <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2h3l2-3h8l2 3h3a2 2 0 0 1 2 2z" />
-                <circle cx="12" cy="13" r="4" />
+                <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 01-8 0" />
               </svg>
             </div>
-            <h3>Create & Share</h3>
-            <p>Showcase your culture through rich video content, stories, and podcasts.</p>
-            <span className="feature-status">Coming Soon</span>
+            <h3>Shop & Discover</h3>
+            <p>Browse trending products, discover new brands, and shop seamlessly from your feed.</p>
           </div>
           <div className="feature-card">
             <div className="feature-icon green">
               <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M2 7h18v10H2z" />
-                <path d="M16 12a2 2 0 100-4 2 2 0 000 4z" />
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
               </svg>
             </div>
-            <h3>Earn & Grow</h3>
-            <p>P2P wallet, ad suite, and creator monetization tools — all built in.</p>
-            <span className="feature-status">Coming Soon</span>
+            <h3>Earn Rewards</h3>
+            <p>Earn coins through engagement, complete challenges, and unlock exclusive rewards.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Phone Mockup Section */}
+      <section className="phone-section">
+        <div className="phone-section-inner">
+          <div className="phone-text">
+            <h2>Your culture.<br /><span className="gradient-text">Your community.</span></h2>
+            <p>
+              LykLuk brings together video creation, social commerce, live streaming, 
+              and rewards into one powerful platform. Whether you're a creator, shopper, 
+              or entrepreneur — there's something for you.
+            </p>
+            <div className="store-badges-small">
+              <a href="https://apps.apple.com/ng/app/lykluk/id6444111490" target="_blank" rel="noopener noreferrer" className="store-badge-mini">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                </svg>
+                App Store
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=com.lykluk.lykluk" target="_blank" rel="noopener noreferrer" className="store-badge-mini">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+                  <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 01-.61-.92V2.734a1 1 0 01.609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 010 1.38l-2.302 2.302-2.533-2.533L17.698 9.508zM5.864 2.658L16.8 8.99l-2.302 2.302-8.635-8.635z" />
+                </svg>
+                Google Play
+              </a>
+            </div>
+          </div>
+          <div className="phone-mockup">
+            <div className="phone-frame">
+              <div className="phone-notch" />
+              <div className="phone-screen">
+                <div className="phone-status-bar">
+                  <span>9:41</span>
+                  <div className="phone-status-icons">
+                    <div className="status-bar-signal" />
+                    <div className="status-bar-wifi" />
+                    <div className="status-bar-battery" />
+                  </div>
+                </div>
+                <div className="phone-app-header">
+                  <img src="/assets/icons/app%20logo.png" alt="" className="phone-logo" />
+                  <span>LykLuk</span>
+                </div>
+                <div className="phone-feed">
+                  <div className="phone-video-card">
+                    <div className="phone-video-overlay">
+                      <span className="phone-play-btn">&#9654;</span>
+                    </div>
+                    <div className="phone-video-info">
+                      <div className="phone-avatar" />
+                      <div className="phone-video-meta">
+                        <div className="phone-line w70" />
+                        <div className="phone-line w50" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="phone-tab-bar">
+                  <div className="phone-tab active" />
+                  <div className="phone-tab" />
+                  <div className="phone-tab center-tab">+</div>
+                  <div className="phone-tab" />
+                  <div className="phone-tab" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -199,7 +265,7 @@ function App() {
               <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M2 6a2 2 0 012-2h16a2 2 0 012 2v.01L12 13 2 6.01V6zm0 3.99V18a2 2 0 002 2h16a2 2 0 002-2V9l-10 6L2 9z"/></svg>
             </a>
           </div>
-          <p className="footer-copy">&copy; 2026 Lykluk. All rights reserved.</p>
+          <p className="footer-copy">&copy; 2025 Lykluk. All rights reserved.</p>
         </div>
       </footer>
     </div>

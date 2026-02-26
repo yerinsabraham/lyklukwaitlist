@@ -5,10 +5,17 @@
   "targets": {
     "lykluk-467006": {
       "hosting": {
-        "main": ["lykluk-467006"],
-        "about": ["lykluk-about"],
-        "blog": ["lykluk-blog"]
+        "main": [
+          "lykluk-467006"
+        ],
+        "about": [
+          "lykluk-about"
+        ],
+        "blog": [
+          "lykluk-blog"
+        ]
       }
     }
-  }
+  },
+  "etags": {}
 }

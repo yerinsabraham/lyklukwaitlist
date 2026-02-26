@@ -4,24 +4,53 @@
 
 /* ─── Hero ─── */
 .blog-hero {
-  background: linear-gradient(135deg, #6A0DAD 0%, #9333ea 50%, #a855f7 100%);
-  padding: 6rem 1.5rem 4rem;
+  position: relative;
+  padding: 7rem 1.5rem 4.5rem;
   text-align: center;
+  overflow: hidden;
+}
+.blog-hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('/assets/images/blog-hero-bg.png') center/cover no-repeat;
+  z-index: 0;
+}
+.blog-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(106, 13, 173, 0.88) 0%, rgba(60, 5, 110, 0.92) 50%, rgba(30, 0, 60, 0.95) 100%);
+  z-index: 1;
 }
 .blog-hero-inner {
+  position: relative;
+  z-index: 2;
   max-width: 700px;
   margin: 0 auto;
+}
+.blog-hero-badge {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.03em;
 }
 .blog-hero h1 {
   color: #fff;
   font-size: clamp(2.2rem, 5vw, 3rem);
   margin: 0 0 1rem;
+  text-shadow: 0 2px 20px rgba(0,0,0,0.3);
 }
 .blog-hero p {
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.85);
   font-size: 1.1rem;
   margin: 0;
   line-height: 1.7;
+  text-shadow: 0 1px 10px rgba(0,0,0,0.2);
 }
 
 /* ─── Section Inner ─── */
@@ -235,49 +264,6 @@
   text-align: center;
   padding: 3rem 0;
   color: var(--color-text-secondary);
-}
-
-/* ─── Newsletter ─── */
-.newsletter-section {
-  padding: 0 0 2rem;
-}
-
-.newsletter-card {
-  background: linear-gradient(135deg, #6A0DAD, #9333ea);
-  border-radius: 20px;
-  padding: 3rem;
-  text-align: center;
-}
-.newsletter-card h2 {
-  color: #fff;
-  font-size: 1.8rem;
-  margin: 0 0 0.75rem;
-}
-.newsletter-card p {
-  color: rgba(255,255,255,0.8);
-  font-size: 1rem;
-  margin: 0 0 1.5rem;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.6;
-}
-
-.newsletter-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.85rem 1.8rem;
-  background: #fff;
-  color: var(--color-primary);
-  border-radius: 12px;
-  font-weight: 700;
-  font-size: 0.95rem;
-  transition: all 0.25s;
-}
-.newsletter-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
 /* ─── Responsive ─── */

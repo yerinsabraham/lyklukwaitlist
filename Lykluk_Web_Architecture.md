@@ -8,7 +8,7 @@ The goals are:
 
 * Move the existing landing page to **about.lykluk.com**
 * Turn **lykluk.com** into a well‑designed "Web App Coming Soon" experience
-* Keep **blog.lykluk.com** as a separate, independently deployable site
+* Keep **blog.lykluk.com** as a separate, independently deployable site. Build a proffessional blog page keeping to same them, logo of lykluk.. but so much more clean and proffessional. create a blog posts.
 * Prepare a clean folder and deployment structure that allows easy replacement of the Coming Soon page with the real WebApp later
 
 This approach avoids downtime, keeps SEO intact, and clearly communicates product direction to users.
@@ -69,6 +69,7 @@ This page should feel authoritative and informational.
 * Future marketing content
 
 Completely independent from the WebApp release cycle.
+ Build a proffessional blog page keeping to same them, logo of lykluk.. but so much more clean and proffessional. create a blog posts
 
 ---
 

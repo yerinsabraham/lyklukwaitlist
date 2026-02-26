@@ -33,7 +33,10 @@ export default function BlogHome() {
     <div className="blog-home">
       {/* Hero */}
       <section className="blog-hero">
+        <div className="blog-hero-bg" />
+        <div className="blog-hero-overlay" />
         <div className="blog-hero-inner">
+          <span className="blog-hero-badge">Stories & Updates</span>
           <h1>Lykluk Blog</h1>
           <p>Product updates, creator stories, and insights on African culture, commerce, and community.</p>
         </div>
@@ -123,21 +126,6 @@ export default function BlogHome() {
         </div>
       </section>
 
-      {/* Newsletter CTA */}
-      <section className="newsletter-section">
-        <div className="section-inner">
-          <div className="newsletter-card">
-            <h2>Stay in the loop</h2>
-            <p>Join our waitlist and be the first to hear about new features, creator spotlights, and product launches.</p>
-            <a className="newsletter-btn" href="https://about.lykluk.com/#waitlist">
-              Join the Waitlist
-              <svg viewBox="0 0 20 20" fill="currentColor" width="16" height="16">
-                <path fillRule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clipRule="evenodd" />
-              </svg>
-            </a>
-          </div>
-        </div>
-      </section>
     </div>
   )
 }
