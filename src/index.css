@@ -43,10 +43,9 @@ h1, h2, h3, .title, .kicker, .section-title, .features-heading {
 body {
   margin: 0;
   min-width: 320px;
-  /* Start with neutral background color to prevent flash during image load */
-  background-color: #0a0a0f;
-  /* Load background image progressively */
+  /* Load background image */
   background: url('/assets/images/background1.png?v=20251102') center/cover no-repeat fixed;
+  background-color: #f5f5f5;
   color: var(--color-charcoal);
 }
 
